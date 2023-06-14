@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">And06_Resource_Str</string>
+    <string name="kym_version">v.A.1.14</string>
+    <string name="user">hanul2</string>
+    <string name="server_ip">192.168.0.113</string>
+</resources>
