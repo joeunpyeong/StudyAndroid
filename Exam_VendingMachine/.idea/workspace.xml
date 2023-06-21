@@ -10,17 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f87d5a0-e577-4f82-bb89-c1376dff05fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/exam_vendingmachine/DrinkDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/exam_vendingmachine/ViewHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../game1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../game1/app/src/main/java/com/example/game1/AvatarActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../game1/app/src/main/res/layout/activity_avatar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And07_ActivitiyIntent/app/src/main/java/com/example/and07_activitiyintent/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And07_ActivitiyIntent/app/src/main/java/com/example/and07_activitiyintent/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And07_ActivitiyIntent/app/src/main/java/com/example/and07_activitiyintent/TestActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And07_ActivitiyIntent/app/src/main/java/com/example/and07_activitiyintent/TestActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/AdapterActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/ListDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/SubFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/listv/AdapterListView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/listv/ListFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/activity_adapter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_sub.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/item_listview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,16 +154,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/exam_vendingmachine/MainActivity.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
