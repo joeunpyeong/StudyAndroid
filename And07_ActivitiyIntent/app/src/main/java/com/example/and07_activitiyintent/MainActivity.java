@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //alt+ enter
 
         //name으로 값을 찾았을때 없다면, 기본값을 어떤걸로 할건지 defaultValue
-        Log.d( "인텐트", "onCreate: "+strValue);
-        Log.d( "인텐트", "onCreate: "+intValue);
-        Log.d( "dto id", "onCreate: "+dto.getId());
+        Log.d( TAG, "onCreate: "+strValue);
+        Log.d( TAG, "onCreate: "+intValue);
+        Log.d( TAG, "onCreate: "+dto.getId());
 
         ArrayList<LoginDTO> list = (ArrayList<LoginDTO>) intent.getSerializableExtra("list");
         Log.d(TAG, "onCreate: "+list.size());
@@ -85,6 +85,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn_search.setOnClickListener(this);
         btn_sms.setOnClickListener(this);
+        btn_str.setOnClickListener(this);
+        btn_num.setOnClickListener(this);
+        btn_3.setOnClickListener(this);
+        btn_4.setOnClickListener(this);
 
     }
     @Override
@@ -103,15 +107,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v.getId()==R.id.btn_str) {
             Intent intent = new Intent(MainActivity.this ,TestActivity.class);
             intent.putExtra("str",edt_str.getText().toString());
+            startActivity(intent);
 
         } else if (v.getId()==R.id.btn_num) {
             Intent intent = new Intent(MainActivity.this ,TestActivity.class);
             intent.putExtra("num",edt_num.getText().toString());
+            startActivity(intent);
 
         } else if (v.getId()==R.id.btn_3) {
             Intent intent = new Intent(MainActivity.this ,TestActivity.class);
             ArrDTO arrDTO = new ArrDTO(Integer.parseInt(edt_num.getText().toString()),edt_str.getText().toString());
             intent.putExtra("dto", (CharSequence) arrDTO);
+            startActivity(intent);
+
         } else if (v.getId()==R.id.btn_4) {
             Intent intent = new Intent(MainActivity.this ,TestActivity.class);
             ArrayList<ArrDTO> arrDTOS= new ArrayList<>();
@@ -122,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             arrDTOS.add(new ArrDTO(5,"b5"));
 
             intent.putExtra("arrDTOS",arrDTOS);//startActvity가 되기 전에 데이터 담는 처리를 끝내자
+            startActivity(intent);
 
         }
     }

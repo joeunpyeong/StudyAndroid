@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class TestActivity extends AppCompatActivity {
 
     @Override
@@ -15,8 +17,8 @@ public class TestActivity extends AppCompatActivity {
         Intent intent= getIntent();
         String str=intent.getStringExtra("str");
         String num=intent.getStringExtra("num");
-        ArrDTO dto=intent.getExtra("dto");
-        ArrDTO arrDTOS=intent.getStringExtra(arrDTOS);
+        ArrDTO dto= (ArrDTO) intent.getSerializableExtra("dto");
+        ArrayList<ArrDTO> arrDTOS= (ArrayList<ArrDTO>) intent.getSerializableExtra("arrDTOS");
 
         Log.d("응애", "onCreate: "+str);
         Log.d("응애", "onCreate: "+num);
