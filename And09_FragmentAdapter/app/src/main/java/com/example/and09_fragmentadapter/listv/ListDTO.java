@@ -1,8 +1,8 @@
-package com.example.and09_fragmentadapter;
+package com.example.and09_fragmentadapter.listv;
 
 public class ListDTO {
-    private int imgRes;
-    private String name, msg;
+    private int imgRes ;
+    private String name , msg ;
 
     public ListDTO(int imgRes, String name, String msg) {
         this.imgRes = imgRes;

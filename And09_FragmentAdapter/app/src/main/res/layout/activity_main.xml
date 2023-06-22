@@ -6,20 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
+    <!-- 관례상 어떤 레이아웃이 붙기위한 ViewGroup의 id:?-->
+
     <Button
         android:id="@+id/btn_adapter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="어댑터 액티비티로 이동"
-        android:layout_gravity="center"/>
+        android:text="어댑터 액티비티로 이동"/>
 
     <FrameLayout
-        android:id="@+id/container_fl"
+        android:id="@+id/container"
         android:background="#DFDFDF"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -31,7 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="메뉴1"/>
-
         <Button
             android:id="@+id/btn_menu2"
             android:layout_width="wrap_content"

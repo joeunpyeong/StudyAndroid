@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listv.ListFragment">
+    tools:context=".grid.GridFragment">
 
-    <ListView
-        android:id="@+id/listv"
+    <GridView
+        android:numColumns="3"
+        android:id="@+id/gridv"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
