@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WellcomActivity"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+
+    >
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_wellcome"
+        android:layout_width="match_parent"
+        android:layout_height="450dp" />
+
+    <TextView
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Discord에 오신 걸 환영합니다"
+        android:fontFamily="@font/discord_bold"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="1억 명 이상의 전 세계커뮤니티와 친구들이 모이는 Discord에서 함께 대화를 나눠보세요."
+        android:fontFamily="@font/discord_normal"
+        android:textSize="12dp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btn_join"
+        android:textColor="#FFF"
+        android:background="@drawable/custom_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="가입하기"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:textColor="#FFF"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="@color/sub_color_gray"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="로그인"/>
+
+
+</LinearLayout>

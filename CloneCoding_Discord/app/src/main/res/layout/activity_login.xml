@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/img_backarrow"
+        android:backgroundTint="@color/sub_color_gray"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="돌아오신 것을 환영해요!"
+        android:fontFamily="@font/discord_bold"
+        android:textSize="25dp"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다시 만나다니 너무 반가워요!"
+        android:fontFamily="@font/discord_normal"
+        android:textSize="15dp"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="계정 정보"
+        android:textSize="12dp"
+        android:fontFamily="@font/discord_normal"
+        android:layout_marginBottom="5dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:id="@+id/edt_id"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/edittext_hint_gray"
+            android:background="@android:color/transparent"
+            android:hint="이메일 또는 전화번호" />
+        <ImageButton
+            android:id="@+id/imb_delete_id"
+            android:background="@android:color/transparent"
+            android:src="@drawable/img_eye"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="필수 입력 칸이에요."
+        android:textSize="12dp"
+        android:textColor="#FF0000"
+        android:fontFamily="@font/discord_normal"
+        android:layout_marginBottom="5dp"
+        />
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_edittext"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:id="@+id/edt_pw"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/edittext_hint_gray"
+            android:background="@android:color/transparent"
+            android:inputType="textPassword"
+            android:hint="비밀번호" />
+        <ImageButton
+            android:id="@+id/imb_toggle_show"
+            android:background="@android:color/transparent"
+            android:src="@drawable/img_eye"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="필수 입력 칸이에요."
+        android:textSize="12dp"
+        android:textColor="#FF0000"
+        android:fontFamily="@font/discord_normal"
+        android:layout_marginBottom="5dp"
+        />
+
+    <TextView
+        android:id="@+id/btn_lost_password"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호를 잊으셨나요?"
+        android:textSize="10dp"
+        android:textColor="#599EEE"
+        />
+    <TextView
+        android:id="@+id/btn_use_psadmin"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 관리자를 사용하시겠어요??"
+        android:textSize="10dp"
+        android:textColor="#599EEE"
+        />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_login"
+        android:textColor="#FFF"
+        android:background="@drawable/custom_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="로그인"/>
+</LinearLayout>

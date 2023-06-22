@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    >
+    <Button
+        android:id="@+id/btn_jump"
+        android:layout_gravity="right"
+        android:layout_marginBottom="10dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="@color/sub_color_gray"
+        android:text="건너뛰기"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="프로필 사진 선택하기"
+        android:fontFamily="@font/discord_bold"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나를 표현할 사진을 선택하세요!"
+        android:fontFamily="@font/discord_normal"
+        android:textSize="12dp"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/btn_choice"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:layout_width="220dp"
+        android:layout_height="200dp"
+        android:background="@drawable/img_profile0"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="또는 Discord 아바타를 선택하세요"
+        android:fontFamily="@font/discord_normal"
+        android:textSize="12dp"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_img1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_profile1"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/btn_img2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_profile2"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/btn_img3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_profile3"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/btn_img4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_profile4"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_img5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_profile5"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/btn_img6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_profile6"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/btn_img7"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_profile7"
+            android:layout_marginRight="20dp"/>
+        <Button
+            android:id="@+id/btn_img8"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/img_profile8"/>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_gravity="bottom"
+        android:layout_marginTop="140dp"
+        android:id="@+id/btn_next"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="다음"/>
+</LinearLayout>
