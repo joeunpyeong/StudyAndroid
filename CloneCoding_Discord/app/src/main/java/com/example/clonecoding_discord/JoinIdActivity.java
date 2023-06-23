@@ -4,11 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.clonecoding_discord.databinding.ActivityJoinIdBinding;
+import com.example.clonecoding_discord.databinding.ActivityLoginBinding;
+
 public class JoinIdActivity extends AppCompatActivity {
 
+    ActivityJoinIdBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_join_id);
+        binding = ActivityJoinIdBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+
+        DuplicateCode.BackButton(binding.btnBack,this);
     }
 }

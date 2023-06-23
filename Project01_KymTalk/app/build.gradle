@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.clonecoding_discord'
+    namespace 'com.example.project01_kymtalk'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.clonecoding_discord"
+        applicationId "com.example.project01_kymtalk"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -26,7 +26,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
     viewBinding{
         enabled=true
     }

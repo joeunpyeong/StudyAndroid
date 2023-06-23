@@ -10,44 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f87d5a0-e577-4f82-bb89-c1376dff05fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/grid/AdapterGridView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/grid/GridFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/practice/AdapterPracticeV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/practice/PracticeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/practice/PracticeFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/recycler/AdapterRecv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/recycler/NormalClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/recycler/RecvDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/recycler/RecyclerFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/chart_img1.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/chart_img2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/chart_img3.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/chart_img4.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/chart_img5.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/chart_img6.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/chart_img7.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/etc_img.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/logo.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/play.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/drawable/play_img.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_practice.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_recycler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/item_prc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/item_recv.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/AdapterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/AdapterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/HomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/ListDTO.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/friend/FriendAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/friend/FriendDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/baseline_keyboard_arrow_up_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/btm_menu_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/img_keroro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/img_kururu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/img_line.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/img_tamama.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/loding.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/layout/item_friend_recv.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/menu/btm_mainact_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/SubFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/SubFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/listv/AdapterListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/listv/AdapterListView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/listv/ListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/listv/ListFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/activity_adapter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/activity_adapter.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_sub.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/fragment_sub.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/item_listview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/res/layout/item_listview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/DuplicateCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/DuplicateCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/JoinIdActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/JoinIdActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/activity_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,15 +65,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Study_Android/WorkSpace/StudyAndroid/Exam_VendingMachine&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "D:/Study_Android/WorkSpace/StudyAndroid/And09_FragmentAdapter"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="Exam_VendingMachine.app.main" />
