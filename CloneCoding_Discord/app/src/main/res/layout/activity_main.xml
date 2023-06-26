@@ -1,99 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:background="#E2E4E7">
-    <LinearLayout
-        android:layout_weight="1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/img_profile1"/>
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_profile1"/>
+        android:layout_weight="1"/>
 
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="4"
-            android:layout_width="0dp"
-            android:layout_margin="20dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="다이렉트 메세지"/>
-            <ImageView
-                android:scaleType="centerInside"
-                android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:src="@drawable/img_main"/>
-            <TextView
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:fontFamily="@font/discord_bold"
-                android:text="메시지가 아직 없어요!"/>
-            <TextView
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:fontFamily="@font/discord_normal"
-                android:text="친구와 직접 채팅중이라면 여기에 표시 돼요"/>
 
-            <Button
-                android:layout_marginTop="20dp"
-                android:id="@+id/btn_login"
-                android:textColor="#FFF"
-                android:background="@drawable/custom_button"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="친구 추가하기"/>
-
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal">
-        <ImageButton
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_profile1"/>
-        <ImageButton
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_profile1"/>
-        <ImageButton
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_profile1"/>
-        <ImageButton
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_profile1"/>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@color/sub_color_gray"
+        android:background="#F1F2F4"
+        />
+
+
 </LinearLayout>

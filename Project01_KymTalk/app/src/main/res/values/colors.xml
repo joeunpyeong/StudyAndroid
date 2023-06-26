@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="main_color">#FFFFFFFF</color>
+    <color name="friend_tv_category_gray">#979797</color>
+    <color name="view_line_gray">#CCCCCC</color>
 </resources>

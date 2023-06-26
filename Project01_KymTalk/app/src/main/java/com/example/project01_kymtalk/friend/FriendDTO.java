@@ -1,14 +1,11 @@
 package com.example.project01_kymtalk.friend;
 
-public class FriendDTO {
-    private int resImgId;
-    private String name, msg;
+import java.io.Serializable;
 
-    public FriendDTO(int resImgId, String name, String msg) {
-        this.resImgId = resImgId;
-        this.name = name;
-        this.msg = msg;
-    }
+public class FriendDTO implements Serializable {
+
+    private int resImgId ;
+    private String name , msg;
 
     public int getResImgId() {
         return resImgId;
@@ -31,6 +28,12 @@ public class FriendDTO {
     }
 
     public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public FriendDTO(int resImgId, String name, String msg) {
+        this.resImgId = resImgId;
+        this.name = name;
         this.msg = msg;
     }
 }

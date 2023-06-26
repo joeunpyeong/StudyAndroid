@@ -18,45 +18,35 @@ public class DuplicateCode {
         backButton.setOnClickListener(v -> act.finish());
     }
 
-    public static void EdtClear(ImageButton imb, EditText edt) {
+    public static void EdtClear(ImageButton imb, EditText edt) { //edt 삭제
         imb.setOnClickListener(v -> {
             edt.setText("");
         });
     }
-//    public void IdBtnVisible(ActivityLoginBinding b1,ActivityLoginBinding b2){
-//        binding.edtId.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//                if (binding.edtId.length()==0){
-//                    binding.imbDeleteId.setVisibility(View.GONE);
-//                } else if (binding.edtId.length()!=0) {
-//                    binding.imbDeleteId.setVisibility(View.VISIBLE);
-//                }
-//
-//            }
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//
-//            }
-//        });
-//    }
 
-//    public void ShowPwBtn(ActivityLoginBinding binding,final boolean showTogle ){
-//        this.showTogle=showTogle;
-//
-//        binding.imbToggleShow.setOnClickListener(v -> {
-//            if (showTogle==false) {
-//                binding.edtPw.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-//                showTogle = true;
-//            }else if(showTogle==true){
-//                binding.edtPw.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-//                showTogle =false;
-//            }
-//        });
-//    }
+    public static void IdBtnVisible(EditText edtId,ImageButton imbDeleteId){ //버튼 보이게 안보이게
+        edtId.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (edtId.length()==0){
+                    imbDeleteId.setVisibility(View.GONE);
+                } else if (edtId.length()!=0) {
+                    imbDeleteId.setVisibility(View.VISIBLE);
+                }
+
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+    }
+
+
+
 
 }

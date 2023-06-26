@@ -33,31 +33,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        binding.edtId.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (binding.edtId.length()==0){
-                    binding.imbDeleteId.setVisibility(View.GONE);
-                } else if (binding.edtId.length()!=0) {
-                    binding.imbDeleteId.setVisibility(View.VISIBLE);
-                }
-
-            }
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
         binding.btnLogin.setOnClickListener(v -> {
             //일단 페이지 이동 가능
             Intent intent =new Intent(this,JoinIdActivity.class);
             startActivity(intent);
         });
 
+        DuplicateCode.IdBtnVisible(binding.edtId,binding.imbDeleteId);
         DuplicateCode.EdtClear(binding.imbDeleteId,binding.edtId);
         DuplicateCode.BackButton(binding.btnBack,this);
 

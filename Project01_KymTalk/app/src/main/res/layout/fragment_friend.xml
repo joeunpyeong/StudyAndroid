@@ -1,180 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".friend.FriendFragment"
-    android:orientation="vertical"
-    android:padding="10dp">
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
 
     <ImageView
         android:scaleType="fitXY"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:src="@drawable/banner"/>
+        android:layout_height="80dp"
+        android:src="@drawable/banner_img2"/>
 
     <LinearLayout
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
+        <androidx.cardview.widget.CardView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/img_keroro"/>
-        <TextView
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="이거거"/>
-
-    </LinearLayout>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#959595"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="내 멀티 프로필"/>
+            app:cardCornerRadius="20dp"
+            >
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_arrow_down"/>
-    </LinearLayout>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#959595"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:scaleType="centerCrop"
+            android:src="@drawable/friend_img1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        </androidx.cardview.widget.CardView>
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            style="@style/kakao_friend_name_tv"
+            android:text="YM"/>
+    </LinearLayout>
+
+    <View
+        style="@style/kakao_gray_view_line_1dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/kakao_friend_category_tv_small"
+            android:text="내 멀티프로필"/>
+        <ImageView
+            android:src="@drawable/img_arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <View
+        style="@style/kakao_gray_view_line_1dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/kakao_friend_category_tv_small"
             android:text="생일인 친구"/>
         <ImageView
+            android:src="@drawable/img_arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_arrow_down"/>
-    </LinearLayout>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <View
+        style="@style/kakao_gray_view_line_1dp"/>
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#959595"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="업데이트한 친구"/>
+            style="@style/kakao_friend_category_tv_small"
+            android:text="업데이트한 친구 "/>
         <ImageView
+            android:src="@drawable/img_arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_arrow_down"/>
-    </LinearLayout>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <View
+        style="@style/kakao_gray_view_line_1dp"/>
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#959595"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            style="@style/kakao_friend_category_tv_small"
             android:text="즐겨찾기"/>
         <ImageView
+            android:src="@drawable/img_arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_arrow_down"/>
-    </LinearLayout>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <View
+        style="@style/kakao_gray_view_line_1dp"/>
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#959595"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            style="@style/kakao_friend_category_tv_small"
             android:text="추천친구"/>
         <ImageView
+            android:src="@drawable/img_arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_arrow_down"/>
-    </LinearLayout>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <View
+        style="@style/kakao_gray_view_line_1dp"/>
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#959595"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
         <TextView
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            style="@style/kakao_friend_category_tv_small"
             android:text="채널"/>
         <ImageView
+            android:src="@drawable/img_arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/img_arrow_down"/>
-    </LinearLayout>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+    <View
+        style="@style/kakao_gray_view_line_1dp"/>
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#959595"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_friend_cnt"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="친구123"/>
+            style="@style/kakao_friend_category_tv_small"
+            android:text="친구 123"/>
         <ImageView
+            android:src="@drawable/ic_arrow_up_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_keyboard_arrow_up_24"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recv_friend"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-</LinearLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -4,24 +4,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+
+import com.example.clonecoding_discord.databinding.ActivityWellcomBinding;
 
 public class WellcomActivity extends AppCompatActivity {
 
-    Button btn_join,btn_login;
+    ActivityWellcomBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wellcom);
 
-        btn_join=findViewById(R.id.btn_join);
-        btn_login=findViewById(R.id.btn_login);
+        binding=ActivityWellcomBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        btn_join.setOnClickListener(v -> {
-            Intent intent =new Intent(this,LoginActivity.class);
+        binding.btnJoin.setOnClickListener(v -> {
+            Intent intent =new Intent(this, MainActivity.class);
             startActivity(intent);
         });
-        btn_login.setOnClickListener(v -> {
+
+        binding.btnLogin.setOnClickListener(v -> {
             Intent intent =new Intent(this,JoinIdActivity.class);
             startActivity(intent);
         });

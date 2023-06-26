@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical"
-    android:layout_margin="20dp">
+    android:padding="20dp">
     <Button
         android:id="@+id/btn_back"
         android:layout_marginBottom="25dp"
@@ -58,8 +58,10 @@
         <ImageButton
             android:visibility="gone"
             android:id="@+id/imb_delete_id"
+            android:scaleType="centerCrop"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_eye"
+            android:src="@drawable/img_delete"
+            android:padding="15dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
             />
