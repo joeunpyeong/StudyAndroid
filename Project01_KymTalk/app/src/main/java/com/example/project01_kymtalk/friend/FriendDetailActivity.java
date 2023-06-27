@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.CalendarView;
 
 import com.example.project01_kymtalk.R;
 import com.example.project01_kymtalk.databinding.ActivityFriendDetailBinding;
@@ -36,6 +37,7 @@ public class FriendDetailActivity extends AppCompatActivity {
         binding.imgvProfile.setImageResource(dto.getResImgId());
         binding.tvName.setText(dto.getName());
         binding.tvMsg.setText(dto.getMsg());
+
 
         binding.imgvClose.setOnClickListener(v->{
             finish();//액티비티 종료

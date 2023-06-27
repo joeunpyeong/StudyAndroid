@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/img_x"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="친구 추가하기"
+            android:fontFamily="@font/discord_bold"
+            android:textSize="18dp"
+            android:layout_gravity="center"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_output"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discord에 친구 추가하기"
+        android:fontFamily="@font/discord_bold"
+        android:textColor="@color/black"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:fontFamily="@font/discord_normal"
+        android:text="Discord 사용자명을 사용하여 친구를 추가할 수 있어요."/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="사용자명으로 추가"
+        android:textColor="@color/edittext_hint_gray"
+        android:textSize="13dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_choice">
+        <EditText
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="사용자명 입력하기"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내 사용자명: "
+        android:textColor="@color/edittext_hint_gray"
+        android:textSize="13dp"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_next"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="친구 요청 보내기"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="혹은 이 옵션 사용하기"
+        android:textColor="@color/edittext_hint_gray"
+        android:textSize="13dp"/>
+    <Button
+        android:id="@+id/find_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/img_nonfriend"
+        android:drawableRight="@drawable/img_forward"
+
+        android:padding="14dp"
+
+        android:text="Discord를 사용 중인 친구 찾기"
+        android:textColor="@color/black" />
+</LinearLayout>

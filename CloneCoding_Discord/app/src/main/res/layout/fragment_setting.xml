@@ -1,14 +1,566 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".setting.SettingFragment"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="#9249B1"/>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_gravity="top|right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            >
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_threedot"
+                android:background="@color/white"/>
+        </androidx.cardview.widget.CardView>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="70dp"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="100dp"
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@color/white"
+                android:background="@android:color/transparent"
+                android:outlineProvider="none"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="100dp"
+            >
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/img_profile1"
+                android:outlineProvider="background"
+                />
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/discord_bold"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:text="이름 tv"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/discord_normal"
+            android:textSize="12dp"
+            android:layout_marginBottom="35dp"
+            android:text="계정 태그#0000"/>
+        <!--기본  선택창-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"  >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  상태 설정"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_account"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  Nitro 구독하기"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_nitro"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  계정"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_account_box"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  프로필"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_pan"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  개인정보 보호 및 보안"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_shield"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  승인한 앱"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_key"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  기기"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_monitor"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  연결"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_connected"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  친구 요청"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_account_box"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  QR코드 스캔"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_qr_code"
+                android:drawableRight="@drawable/img_forward"/>
 
-</FrameLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB2B6C5"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="청구 설정"/>
+        <!--청구 설정 선택창-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  서버 부스트"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_boost"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  Nitro 선물"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_connected"
+                android:drawableRight="@drawable/img_forward"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB2B6C5"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="앱 설정"/>
+        <!--앱 설정 선택창-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  음성"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_mic"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  디스플레이"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_display"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  접근성"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_handsup"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  언어"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_translate"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  텍스트 및 미디어"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_text"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  웹 브라우저"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_web"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  알림"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_connected"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  고급"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_gogeup"
+                android:drawableRight="@drawable/img_forward"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB2B6C5"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="지원"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  지원"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_question_mark"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  디버그 로그를 Discord지원팀에 업로드하세요"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_info"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  감사"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_info"
+                android:drawableRight="@drawable/img_forward"/>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB2B6C5"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="새로운 기능"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:layout_marginBottom="10dp"
+            android:textSize="16dp"
+            android:text="  새로운 기능"
+            android:background="#00FF0000"
+            android:fontFamily="@font/discord_medium"
+            android:drawableLeft="@drawable/img_info"
+            android:drawableRight="@drawable/img_forward"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB2B6C5"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="계정"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center"
+            android:layout_marginBottom="10dp"
+            android:textSize="16dp"
+            android:text="  로그아웃"
+            android:background="#00FF0000"
+            android:fontFamily="@font/discord_medium"
+            android:drawableLeft="@drawable/img_logout"
+            android:drawableRight="@drawable/img_forward"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB2B6C5"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="DEVELOPER SETTINGS"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  Mainifest"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_developer"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  JS Build Number"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_developer"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  OS"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_developer"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  Device Info"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_developer"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  Release Channel"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_developer"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  Copy Client Info"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_developer"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  Clear Caches"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_developer"
+                android:drawableRight="@drawable/img_forward"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="left|center"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:text="  Write Caches"
+                android:background="#00FF0000"
+                android:fontFamily="@font/discord_medium"
+                android:drawableLeft="@drawable/img_developer"
+                android:drawableRight="@drawable/img_forward"/>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

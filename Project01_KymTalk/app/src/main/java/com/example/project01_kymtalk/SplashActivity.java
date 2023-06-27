@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.project01_kymtalk.databinding.ActivitySplashBinding;
+import com.example.project01_kymtalk.databinding.KymActBinding;
 
 public class SplashActivity extends AppCompatActivity {
 // ViewBiding처리해보기.

@@ -10,28 +10,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f87d5a0-e577-4f82-bb89-c1376dff05fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/friend/FriendAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/friend/FriendDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/baseline_keyboard_arrow_up_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/btm_menu_selector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/img_keroro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/img_kururu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/img_line.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/img_tamama.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/loding.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/layout/item_friend_recv.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/menu/btm_mainact_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../And09_FragmentAdapter/app/src/main/java/com/example/and09_fragmentadapter/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/DuplicateCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/DuplicateCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/JoinIdActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/JoinIdActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/LoginActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/DoAddFriendActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/FriendDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/chat/ChatFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_account.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_account_box.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_add_comment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_addpeople.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_boost.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_connected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_developer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_display.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_gogeup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_handsup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_key.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_logout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_mic.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_mobileadd.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_monitor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_nitro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_output.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_pan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_qr_code.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_question_mark.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_shield.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_threedot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_translate.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_x.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/activity_do_add_friend.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/fragment_chat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/opentalk/FragmentAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/opentalk/OpenSub1Fragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/opentalk/OpenTalkAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/opentalk/OpenTalkMainFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/chip_opentalk_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/chip_opentalk_forecolor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/ic_chip_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/ic_chip_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/drawable/ic_chip_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/layout/fragment_open_sub1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/layout/fragment_open_talk_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/res/layout/item_rcv1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/AlarmFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/alarm/AlarmFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/FriendFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/friend/FriendFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/MainFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/SettingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/java/com/example/clonecoding_discord/setting/SettingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_nonfriend.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/drawable/img_nonfriend.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/fragment_alarm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/fragment_alarm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/fragment_friend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/fragment_friend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/fragment_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/fragment_setting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CloneCoding_Discord/app/src/main/res/layout/fragment_setting.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/SplashActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/friend/FriendAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/friend/FriendAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/friend/FriendDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project01_KymTalk/app/src/main/java/com/example/project01_kymtalk/friend/FriendDetailActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +110,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "D:/Study_Android/WorkSpace/StudyAndroid/And09_FragmentAdapter"
+    "last_opened_file_path": "D:/Study_Android/WorkSpace/StudyAndroid/Exam_VendingMachine"
   }
 }]]></component>
   <component name="RunManager">

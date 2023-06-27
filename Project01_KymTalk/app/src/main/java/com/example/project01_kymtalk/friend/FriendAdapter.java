@@ -1,7 +1,7 @@
 package com.example.project01_kymtalk.friend;
 
-import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project01_kymtalk.MainActivity;
@@ -27,8 +28,8 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
         this.list = list;
         this.context = context;
     }
-
-
+    //어댑터 : 무슨 역할?
+    //Biding처리 <-> 기존 방식과의 차이.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -44,28 +45,28 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
         h.binding.imgvProfile.setImageResource(list.get(i).getResImgId());
         h.binding.tvName.setText(list.get(i).getName());
         h.binding.lnFriend.setOnClickListener(v->{
-
             Intent intent = new Intent(context , FriendDetailActivity.class);
             intent.putExtra("dto" , list.get(i));
-            // Web ( Customer List화면 아이템 하나 클릭 => get방식으로 id값을 Controller에 전달 => id를 통해서 데이터 한건을 조회 => Vo )
-
-            // 인텐트 객체를 통해서 선택 된 아이템을 => FriendDetailActivity로 전송해보기.
             context.startActivity(intent);
-
         });
-        String[] dialogItems={"즐겨찾기에 추가","이름 변경","숨김","차단"};
-        h.binding.lnFriend.setOnLongClickListener(v -> {
+
+        String[] dialogItems = { "즐겨찾기에 추가" , "이름 변경" , "숨김" , "차단" };
+        h.binding.lnFriend.setOnLongClickListener(v->{
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setTitle(list.get(i).getName());//제목부분
+            builder.setTitle(list.get(i).getName());//제목 부분
             builder.setItems(dialogItems, ((dialog, idx) -> {
                 if(dialogItems[idx].equals("차단")){
                     list.remove(i);
-                    //adapter에 있는 메소드 notifyDtaSetChanged(); <= 내부에 있는 리스트가 바뀌면 바뀌었다는 것을 어댑터에 전달하고 어댑터는 내용을 다시 그린다.
+                    notifyDataSetChanged();//adapter에 있는 메소드 notifyDataSetChanged();<=내부에 있는 리스트가 바뀌면 바뀌었다는것을 어댑터에 전달하고 어댑터는 내용을 다시그린다.
                     dialog.dismiss();//다이얼로그를 안보이게 처리
                 }
             }));
+
+            builder.create().show();
+
             return true;
         });
+
     }
 
     @Override

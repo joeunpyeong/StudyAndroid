@@ -1,69 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FriendFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".friend.FriendFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="친구"/>
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="친구"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src=""/>
+            android:id="@+id/imb_sample"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_handsup"
+            android:background="@android:color/transparent"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_add_comment"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_addpeople"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_mobileadd"
+            android:background="@android:color/transparent"/>
 
     </LinearLayout>
-    <ImageView
-        android:layout_marginTop="200dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/img_nofriends"
-        android:layout_width="match_parent"
-        android:layout_height="200dp" />
-    <TextView
-        android:gravity="center"
+
+    <!--친구 없으면 나오는 화면-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="아직 친구가 없어요"
-        android:textSize="20dp"
-        android:fontFamily="@font/discord_normal"/>
-    <TextView
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="이미 Discord를 사용중인 친구를 찾아 대화를 시작하세요"
-        android:textSize="18dp"
-        android:fontFamily="@font/discord_normal"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/find_friend"
-            android:padding="14dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="30dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_nofriends" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/discord_normal"
+            android:gravity="center"
+            android:text="아직 친구가 없어요"
             android:textColor="@color/black"
-            android:text="Discord를 사용 중인 친구 찾기"/>
+            android:textSize="20dp" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/img_nonfriend"
-            />
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/img_forward" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/discord_normal"
+            android:gravity="center"
+            android:text="이미 Discord를 사용중인 친구를 찾아 대화를 시작하세요"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
 
-    </RelativeLayout>
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/find_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/img_nonfriend"
+        android:drawableRight="@drawable/img_forward"
+
+        android:padding="14dp"
+
+        android:text="Discord를 사용 중인 친구 찾기"
+        android:textColor="@color/black" />
+
+    <!--친구 있으면 나오는 화면-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="온라인- 1명"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv_offline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="오프라인- 1명"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recv_online"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
 </LinearLayout>

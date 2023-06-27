@@ -8,7 +8,11 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.clonecoding_discord.alarm.AlarmFragment;
 import com.example.clonecoding_discord.databinding.ActivityMainBinding;
+import com.example.clonecoding_discord.friend.FriendFragment;
+import com.example.clonecoding_discord.chat.ChatFragment;
+import com.example.clonecoding_discord.setting.SettingFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.container , new MainFragment()).commit();
+        manager.beginTransaction().replace(R.id.container , new ChatFragment()).commit();
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             Fragment fragment=null;
             if(item.getItemId() ==R.id.tab1){
-                fragment = new MainFragment();
+                fragment = new ChatFragment();
                 //manager.beginTransaction().replace(R.id.container,   new FriendFragment()).commit();
             }else if(item.getItemId() ==R.id.tab2){
                 fragment = new FriendFragment();
