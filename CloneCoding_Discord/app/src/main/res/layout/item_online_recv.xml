@@ -2,26 +2,26 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="60dp"
     android:orientation="horizontal"
     android:padding="10dp"
+    android:id="@+id/ln_online_fn"
     >
 
     <FrameLayout
-        android:layout_width="60dp"
-        android:layout_height="60dp">
+        android:layout_width="40dp"
+        android:layout_height="40dp">
         <ImageView
             android:id="@+id/imgv_profile"
             android:layout_gravity="center"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/img_profile1"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/img_button_unchecked"
-            android:layout_gravity="bottom|right"
-            android:=""/>
+            android:layout_gravity="bottom|right"/>
     </FrameLayout>
 
     <LinearLayout
@@ -35,7 +35,7 @@
         >
         <TextView
             android:id="@+id/tv_nickname"
-            android:textSize="18dp"
+            android:textSize="17dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nickname"/>
@@ -43,7 +43,7 @@
         <TextView
             android:id="@+id/tv_singer"
             android:textColor="#717171"
-            android:textSize="16dp"
+            android:textSize="14dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="온라인"/>

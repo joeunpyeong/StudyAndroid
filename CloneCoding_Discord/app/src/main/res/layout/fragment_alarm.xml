@@ -19,25 +19,17 @@
             android:textSize="18dp"
             android:textColor="@color/black"
             android:text="알림"/>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="100dp">
             <Button
                 android:drawableLeft="@drawable/img_handsup"
                 android:layout_width="70dp"
                 android:layout_height="40dp"
-                android:text="0"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="100dp">
+                android:text="0"
+                android:background="@android:color/transparent"/>
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/img_threedot"/>
-        </androidx.cardview.widget.CardView>
+                android:src="@drawable/img_threedot"
+                android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

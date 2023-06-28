@@ -4,14 +4,15 @@ import android.widget.ImageView;
 
 public class FriendDTO {
     private String userNickName,userTag,profile, status;
-    private int profileImg;
+    private int profileImg,profileBanner;
 
-    public FriendDTO(String userTag, String userNickName, String status, String profile, int profileImg) {
+    public FriendDTO(String userNickName, String userTag, String profile, String status, int profileImg, int profileBanner) {
         this.userNickName = userNickName;
         this.userTag = userTag;
         this.profile = profile;
         this.status = status;
         this.profileImg = profileImg;
+        this.profileBanner = profileBanner;
     }
 
     public String getUserNickName() {
@@ -52,5 +53,13 @@ public class FriendDTO {
 
     public void setProfileImg(int profileImg) {
         this.profileImg = profileImg;
+    }
+
+    public int getProfileBanner() {
+        return profileBanner;
+    }
+
+    public void setProfileBanner(int profileBanner) {
+        this.profileBanner = profileBanner;
     }
 }

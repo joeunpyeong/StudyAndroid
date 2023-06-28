@@ -32,8 +32,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/main_color_blue"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/img_chat"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_chat1"
                     app:tint="@color/white"
                     />
             </androidx.cardview.widget.CardView>
@@ -141,7 +141,7 @@
 
                 <Button
                     android:layout_marginTop="20dp"
-                    android:id="@+id/btn_login"
+                    android:id="@+id/btn_gofriend"
                     android:textColor="#FFF"
                     android:background="@drawable/custom_button"
                     android:layout_width="match_parent"

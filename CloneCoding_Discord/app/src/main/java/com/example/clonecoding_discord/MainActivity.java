@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     // MainActivity 바인딩 (뷰결합) 처리하기.
 
     ActivityMainBinding binding;
-    ActionBar actionBar ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }else if(item.getItemId() ==R.id.tab5){
                 fragment = new SettingFragment();
             }else{
-                return false;//메뉴가 바뀌는 처리를 취소한다.(들어올 가능성 없음)
+                return false;
             }
 
 
@@ -52,9 +51,14 @@ public class MainActivity extends AppCompatActivity {
             }else {
                 manager.beginTransaction().replace(R.id.container, fragment).commit();
             }
+
             return true;
         });
 
-
     }
+
+    public void GoFriendFragment( FragmentManager manager){
+        manager.beginTransaction().replace(R.id.container, new FriendFragment()).commit();
+    }
+
 }
