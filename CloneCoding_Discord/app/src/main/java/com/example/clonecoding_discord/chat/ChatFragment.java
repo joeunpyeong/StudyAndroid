@@ -30,6 +30,9 @@ public class ChatFragment extends Fragment {
         binding.btnGofriend.setOnClickListener(v -> {
             nmk.GoFriendFragment(manager);
         });
+        binding.imbInviteSendMsg.setOnClickListener(v -> {
+
+        });
         return binding.getRoot();
     }
 }

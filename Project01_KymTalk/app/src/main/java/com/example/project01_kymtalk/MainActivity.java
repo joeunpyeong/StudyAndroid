@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar = getSupportActionBar();
         actionBar.setElevation(0f);
         actionBar.setTitle("친구");
+        Context context = this;
 
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.container , new FriendFragment()).commit();

@@ -4,11 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.clonecoding_discord.databinding.ActivityDoAddFriendBinding;
+import com.example.clonecoding_discord.databinding.ActivityWellcomBinding;
+
 public class DoAddFriendActivity extends AppCompatActivity {
+    ActivityDoAddFriendBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_do_add_friend);
+
+        binding= ActivityDoAddFriendBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        DuplicateCode.BackButton(binding.btnBack,this);
+
+
     }
 }

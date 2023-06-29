@@ -4,12 +4,13 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import com.example.project01_kymtalk.databinding.ActivitySplashBinding;
-import com.example.project01_kymtalk.databinding.KymActBinding;
 
 public class SplashActivity extends AppCompatActivity {
 // ViewBiding처리해보기.
@@ -20,6 +21,9 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySplashBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        Context context = this;
+
+
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();

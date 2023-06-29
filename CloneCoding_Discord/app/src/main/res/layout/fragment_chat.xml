@@ -106,12 +106,23 @@
                 android:layout_margin="20dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="다이렉트 메세지"/>
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="다이렉트 메세지"/>
+                    <ImageButton
+                        android:id="@+id/imb_inviteSendMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_add_comment"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lin_nonfriend"

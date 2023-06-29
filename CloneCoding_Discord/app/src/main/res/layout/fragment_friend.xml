@@ -31,18 +31,21 @@
             android:src="@drawable/img_handsup"
             android:background="@android:color/transparent"/>
         <ImageButton
+            android:id="@+id/imb_sendMsg"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/img_add_comment"
             android:background="@android:color/transparent"/>
 
         <ImageButton
+            android:id="@+id/imb_friendPlus"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/img_addpeople"
             android:background="@android:color/transparent" />
 
         <ImageButton
+            android:id="@+id/imb_findFriend"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/img_mobileadd"
