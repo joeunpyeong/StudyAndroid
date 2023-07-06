@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.PermitFindFriendActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/img_x"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+    <ImageView
+        android:layout_marginTop="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_permitpreind"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="친구 찾기"
+        android:fontFamily="@font/discord_medium"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Discord에서 친구를 찾거나 친구가 나를 찾을 수 있어요."
+        android:fontFamily="@font/discord_normal"
+        android:textSize="16dp"
+        android:layout_marginBottom="120dp"/>
+
+    <Button
+        android:textColor="#FFF"
+        android:background="@drawable/custom_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="권한 허가하기"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Discord에서 친구를 찾을 수 있도록 하려면, Discord에 회원님의 연락처에 엑세스할 권한을 부여해주셔야해요. 설정의 권한 메뉴로 이동해 연락처 기능을 켜주세요."
+        android:fontFamily="@font/discord_normal"
+        android:textSize="12dp"
+        android:layout_marginBottom="30dp"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="연락처를 통한 추가 허용"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:button="@null"
+        android:checked="true"
+        android:drawableTint="@color/main_color_blue"
+        />
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="상대의 연락처에 내 전화번호가 지정되어 있다면 상대가 나를 추가할 수 있어요.(곧 이메일로도 가능해요!)"
+        android:fontFamily="@font/discord_normal"
+        android:textSize="12dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="설정에서 언제든지 변경할 수 있어요. "
+            android:fontFamily="@font/discord_normal"
+            android:textSize="12dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자세히 알아보기"
+            android:fontFamily="@font/discord_normal"
+            android:textColor="@color/main_color_blue"
+            android:textSize="12dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -13,31 +13,34 @@
         android:theme="@style/Theme.CloneCoding_Discord"
         tools:targetApi="31">
         <activity
-            android:name=".DoAddFriendActivity"
+            android:name=".main.PermitFindFriendActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".main.DoAddFriendActivity"
             android:exported="false" />
         <activity
-            android:name=".AllowSearchActivity"
+            android:name=".main.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".main.AllowSearchActivity"
             android:exported="false" />
         <activity
-            android:name=".JoinBirthdayActivity"
+            android:name=".start.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".JoinNicknameActivity"
+            android:name=".start.JoinBirthdayActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".start.JoinNicknameActivity"
             android:exported="false" />
         <activity
-            android:name=".JoinIdActivity"
+            android:name=".start.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".WellcomActivity"
+            android:name=".start.JoinIdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".start.WellcomActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
