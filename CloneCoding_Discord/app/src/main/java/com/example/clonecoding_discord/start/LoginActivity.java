@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 
+import com.example.clonecoding_discord.CommonConn;
 import com.example.clonecoding_discord.DuplicateCode;
 import com.example.clonecoding_discord.databinding.ActivityLoginBinding;
 import com.example.clonecoding_discord.start.JoinIdActivity;
@@ -34,9 +35,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
         binding.btnLogin.setOnClickListener(v -> {
-            //일단 페이지 이동 가능
-            Intent intent =new Intent(this, JoinIdActivity.class);
-            startActivity(intent);
+            CommonConn conn = new CommonConn(this , "user/login.cu");
+            conn.addParamMap("user_id", binding.edtId.getText().toString());
+            conn.addParamMap("user_pw", binding.edtPw.getText().toString());
+            conn.onExcute(new CommonConn.JepCallBack() {
+                @Override
+                public void onResult(boolean isResult, String data) {
+
+                }
+            });
         });
 
         DuplicateCode.IdBtnVisible(binding.edtId,binding.imbDeleteId);

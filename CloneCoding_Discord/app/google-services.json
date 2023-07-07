@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "210641847594",
+    "project_id": "discordclone-7da2c",
+    "storage_bucket": "discordclone-7da2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210641847594:android:fca021bd1049a00de0ca53",
+        "android_client_info": {
+          "package_name": "com.example.clonecoding_discord"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210641847594-f6tcra1hhbksdmt44nv5ghvo576221bp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPkmxnKJyAs0gfIZPP8fWHFivWpY9TN94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210641847594-f6tcra1hhbksdmt44nv5ghvo576221bp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

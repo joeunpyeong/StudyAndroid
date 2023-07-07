@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn_login = findViewById(R.id.btn_btn);
 
         btn_login.setOnClickListener(v->{
-            CommonConn conn = new CommonConn(this , "member/login");
+            CommonConn conn = new CommonConn(this , "member/login.cu");
             conn.addParamMap("id", edt_id.getText().toString());
             conn.addParamMap("pw", edt_pw.getText().toString());
             conn.onExcute(new CommonConn.JepCallBack() {

@@ -1,13 +1,11 @@
-package com.example.and00_login;
+package com.example.clonecoding_discord;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -37,20 +35,7 @@ public class CommonConn {
             paramMap.put(key,value);
         }
     }
-    // enque ( 전송 실행전 해야할 코드를 넣어줄 메소드 구현 , (ProgressDialog보이게 처리)
-    private void onPreExcute(){
-        if(context != null && dialog == null){
-            dialog = new ProgressDialog(context);
-            dialog.setProgress(ProgressDialog.STYLE_SPINNER);
-            dialog.setTitle("Common");
-            dialog.setMessage("로딩중입니다.");
-            dialog.setCancelable(false);
-            dialog.show();
-        }
-    }
-    // enque가 실제로 되어야 하는부분. ( 파라메터등을 이용해서 실제로 Spring에 전송한다. )↑
     public void onExcute( JepCallBack callBack){
-        onPreExcute();
         //2. 옵저버 2
         this.callBack = callBack;
         RetrofitInterface api = new RetrofitClient().getRetrofit().create(RetrofitInterface.class);
@@ -58,14 +43,14 @@ public class CommonConn {
         api.clientPostMethod(mapping , paramMap).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                Log.d(TAG, "onExcute . onResponse: " +response.body());
+                Log.d(TAG, "onExcute . onResponse: " +response.body()+paramMap.get("user_id").toString()+paramMap.get("user_pw").toString());
                 onPostExcute(true , response.body());
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
                 Log.d(TAG, "onExcute . onFailure: "+t.getMessage() );
-                Toast.makeText(context, "서버와의 연결에 실패했습니다.(개발자문의하시든가하세요)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "서버와의 연결에 실패했습니다.", Toast.LENGTH_SHORT).show();
                 onPostExcute(false , t.getMessage());
             }
         });

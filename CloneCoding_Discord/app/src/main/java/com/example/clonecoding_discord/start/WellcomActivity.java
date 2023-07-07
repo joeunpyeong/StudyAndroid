@@ -25,7 +25,7 @@ public class WellcomActivity extends AppCompatActivity {
         });
 
         binding.btnLogin.setOnClickListener(v -> {
-            Intent intent =new Intent(this, JoinIdActivity.class);
+            Intent intent =new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
     }
