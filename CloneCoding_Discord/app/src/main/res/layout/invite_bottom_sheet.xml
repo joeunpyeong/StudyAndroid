@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="45dp"
+                android:layout_height="5dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center|top"
+                android:src="#E2E4E7"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded"
+                android:padding="15dp"
+                android:text="친구 초대 후 메시지 보내기"
+                android:textColor="@color/black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="10dp">
+                <EditText
+                    android:background="#E2E4E7"
+                    android:layout_width="280dp"
+                    android:layout_height="37dp"
+                    android:hint="  친구 찾기"
+                    android:drawableRight="@drawable/img_search"
+                    />
+                <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시작"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="멤버 추가하기(1/10)"
+                android:paddingLeft="12dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recv_friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                />
+
+</LinearLayout>

@@ -27,6 +27,7 @@ public class CommonConn {
         this.context = context;
         this.mapping = mapping;
         this.paramMap = new HashMap<>();
+        Log.d("콜백", "콜백(인터페이스의 메모리): "+callBack);
     }
     public void addParamMap(String key , Object value){
         if(key == null){
@@ -52,7 +53,11 @@ public class CommonConn {
     public void onExcute( JepCallBack callBack){
         onPreExcute();
         //2. 옵저버 2
+
+        Log.d("콜백", "콜백(인터페이스의 메모리): "+this.callBack);
         this.callBack = callBack;
+
+        Log.d("콜백", "콜백(인터페이스의 메모리): "+this.callBack+"받아온것 =>"+callBack);
         RetrofitInterface api = new RetrofitClient().getRetrofit().create(RetrofitInterface.class);
         //GET방식인지 POST방식인지를 받아와서 처리도 가능하다.(현재는 어려우니까 POST로 고정시켜놓기)
         api.clientPostMethod(mapping , paramMap).enqueue(new Callback<String>() {
