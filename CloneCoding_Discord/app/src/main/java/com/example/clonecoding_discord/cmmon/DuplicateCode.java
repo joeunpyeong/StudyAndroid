@@ -1,4 +1,4 @@
-package com.example.clonecoding_discord;
+package com.example.clonecoding_discord.cmmon;
 
 import android.app.Activity;
 import android.text.Editable;

@@ -1,4 +1,4 @@
-package com.example.clonecoding_discord;
+package com.example.clonecoding_discord.cmmon;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;

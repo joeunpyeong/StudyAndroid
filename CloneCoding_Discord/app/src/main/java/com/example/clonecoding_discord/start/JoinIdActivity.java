@@ -4,9 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.clonecoding_discord.DuplicateCode;
+import com.example.clonecoding_discord.cmmon.DuplicateCode;
 import com.example.clonecoding_discord.databinding.ActivityJoinIdBinding;
-import com.example.clonecoding_discord.databinding.ActivityLoginBinding;
 
 public class JoinIdActivity extends AppCompatActivity {
 

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.clonecoding_discord.DuplicateCode;
+import com.example.clonecoding_discord.cmmon.DuplicateCode;
 import com.example.clonecoding_discord.databinding.ActivityPermitFindFriendBinding;
 
 public class PermitFindFriendActivity extends AppCompatActivity {

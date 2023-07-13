@@ -40,6 +40,7 @@
         android:layout_marginBottom="5dp"
         />
     <LinearLayout
+        android:id="@+id/layout_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_edittext"
@@ -67,10 +68,10 @@
             />
     </LinearLayout>
     <TextView
+        android:id="@+id/tv_id_error"
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="필수 입력 칸이에요."
         android:textSize="12dp"
         android:textColor="#FF0000"
         android:fontFamily="@font/discord_normal"
@@ -80,6 +81,7 @@
 
 
     <LinearLayout
+        android:id="@+id/layout_pw"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -108,10 +110,10 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_pw_error"
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="필수 입력 칸이에요."
         android:textSize="12dp"
         android:textColor="#FF0000"
         android:fontFamily="@font/discord_normal"
