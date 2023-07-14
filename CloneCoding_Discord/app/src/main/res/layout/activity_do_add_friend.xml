@@ -60,6 +60,7 @@
         android:textColor="@color/edittext_hint_gray"
         android:textSize="13dp"/>
     <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"

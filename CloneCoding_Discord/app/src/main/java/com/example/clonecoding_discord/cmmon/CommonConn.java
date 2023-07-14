@@ -43,7 +43,7 @@ public class CommonConn {
         api.clientPostMethod(mapping , paramMap).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                Log.d(TAG, "onExcute . onResponse: " +response.body()+paramMap.get("user_id").toString()+paramMap.get("user_pw").toString());
+//                Log.d(TAG, "onExcute . onResponse: " +response.body()+paramMap.get("user_id").toString()+paramMap.get("user_pw").toString());
                 onPostExcute(true , response.body());
             }
 

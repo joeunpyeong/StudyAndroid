@@ -39,10 +39,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        GradientDrawable drawable = new GradientDrawable();
+        GradientDrawable gdbFals = new GradientDrawable();
         float[] cornerRadii = {10, 10, 10, 10, 10, 10, 10, 10}; // 각 꼭지점의 반지름 값
-        drawable.setCornerRadii(cornerRadii);
-        drawable.setStroke(2, Color.RED);  // 테두리의 두께와 색상을 설정합니다. 여기서는 두께 2dp, 빨간색입니다.
+        gdbFals.setCornerRadii(cornerRadii);
+        gdbFals.setStroke(2, Color.RED);  // 테두리의 두께와 색상을 설정합니다. 여기서는 두께 2dp, 빨간색입니다.
 
 
         binding.btnLogin.setOnClickListener(v -> {
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             ){
                 binding.tvIdError.setText("필수 입력 칸이에요");
                 binding.tvIdError.setVisibility(View.VISIBLE);
-                binding.layoutId.setBackground(drawable);
+                binding.layoutId.setBackground(gdbFals);
                 return;
             }
             CommonConn conn = new CommonConn(this , "user/login");
@@ -67,8 +67,8 @@ public class LoginActivity extends AppCompatActivity {
                         binding.tvIdError.setVisibility(View.VISIBLE);
                         binding.tvPwError.setText("유효하지 않은 아이디 또는 비밀번호입니다.");
                         binding.tvPwError.setVisibility(View.VISIBLE);
-                        binding.layoutId.setBackground(drawable);
-                        binding.layoutPw.setBackground(drawable);
+                        binding.layoutId.setBackground(gdbFals);
+                        binding.layoutPw.setBackground(gdbFals);
                     }else{
                         //CommonVar.loginInfo = vo;
                         Intent intent = new Intent(LoginActivity.this , MainActivity.class);
