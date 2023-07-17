@@ -14,5 +14,13 @@ dependencyResolutionManagement {
         maven { url 'https://www.jitpack.io' }
     }
 }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+    }
+}
 rootProject.name = "Project02_LastPrj"
 include ':app'

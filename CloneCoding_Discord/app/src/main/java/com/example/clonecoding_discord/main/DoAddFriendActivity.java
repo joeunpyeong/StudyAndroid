@@ -8,6 +8,8 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
+import android.widget.Toast;
 
 import com.example.clonecoding_discord.R;
 import com.example.clonecoding_discord.cmmon.CommonConn;
@@ -16,6 +18,7 @@ import com.example.clonecoding_discord.cmmon.DuplicateCode;
 import com.example.clonecoding_discord.databinding.ActivityDoAddFriendBinding;
 import com.example.clonecoding_discord.vo.FriendVO;
 import com.example.clonecoding_discord.vo.UserVO;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 
 public class DoAddFriendActivity extends AppCompatActivity {
@@ -67,9 +70,9 @@ public class DoAddFriendActivity extends AppCompatActivity {
             fc.addParamMap("friend_user_tag", binding.edtUserTag.getText().toString());
 
             CommonConn fa = new CommonConn(this,"friend/add");
-            fc.addParamMap("user_tag",CommonVar.loginInfo.getUser_tag());
-            fc.addParamMap("friend_user_tag", binding.edtUserTag.getText().toString());
-            fc.addParamMap("status", "요청중");
+            fa.addParamMap("user_tag",CommonVar.loginInfo.getUser_tag());
+            fa.addParamMap("friend_user_tag", binding.edtUserTag.getText().toString());
+            fa.addParamMap("status", "요청중");  //<------------------------------------------------------------이거 db에 글자 깨짐
 
 
 
@@ -86,11 +89,19 @@ public class DoAddFriendActivity extends AppCompatActivity {
                             binding.layout.setBackground(gdbFals);
                         } else if (friendVO==null||!friendVO.getStatus().equals("친구")){
                             fa.onExcute((fa_isResult,fa_data)->{
+//                                Snackbar.make(v,"친구 요청 완료",Snackbar.LENGTH_SHORT).show();
+                                Toast toast = Toast.makeText(this, "친구 요청 완료", Toast.LENGTH_SHORT);//<----------------------------------상단에 뜨게 하고싶은데 안됨
+                                toast.setGravity(Gravity.TOP, 0, 0);
+                                toast.show();
                                 binding.userTag.setText("내 사용자명: "+CommonVar.loginInfo.getUser_tag());
                                 binding.userTag.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.edittext_hint_gray));
                                 binding.layout.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_choice));
 
                             });
+                        }else if(friendVO.getStatus().equals("대기중")){
+                            binding.userTag.setText(binding.edtUserTag.getText().toString()+"님이 친구 요청을 수락하지 않네요. 친구가 되려면 상대방이 나를 추가해야 해요.");
+                            binding.userTag.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.red));
+                            binding.layout.setBackground(gdbFals);
                         }else if(friendVO.getStatus().equals("친구")){
                             binding.userTag.setText("이미 친구가 된 사용자에요!");
                             binding.userTag.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.red));

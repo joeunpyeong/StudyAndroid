@@ -51,4 +51,6 @@ dependencies {
     implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
     //리사이클러뷰나 목록을 가진 뷰가 맨 위로 스크롤이 되면 새로고치믕ㄹ 하는 디자인이 나옴(스피너)
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    implementation "com.kakao.sdk:v2-user:2.15.0" // 카카오 로그인
 }

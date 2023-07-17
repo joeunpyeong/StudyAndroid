@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".member.LoginActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
     <!--Glide Url을 이용해서 이미지를 붙이는 처리.예정-->
     <ImageView
         android:id="@+id/imgv_logo"
@@ -89,6 +90,55 @@
         app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
         app:strokeColor="#123456"
         app:strokeWidth="3dp" />
+    <ImageView
+        android:id="@+id/imgv_kakaologin"
+        android:scaleType="fitXY"
+        android:src="@drawable/kakao_login_large_narrow"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#1A7E04"
+        android:elevation="5dp"
+        android:text="네이버 아이디로 로그인(예정)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_launcher_foreground"
+        app:iconGravity="start"
+        app:iconPadding="@dimen/cardview_compat_inset_shadow"
+        app:iconSize="50dp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#1A7E04"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+        app:strokeColor="#1A7E04"
+        app:strokeWidth="3dp" />
 
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아직 회원이 아니라면?"
+            />
+        <TextView
+            android:id="@+id/tv_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textStyle="bold|italic"
+            android:textColor="#3280CD"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -20,7 +20,7 @@ public class WellcomActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.btnJoin.setOnClickListener(v -> {
-            Intent intent =new Intent(this, MainActivity.class);
+            Intent intent =new Intent(this, JoinIdActivity.class);
             startActivity(intent);
         });
 

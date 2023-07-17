@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".start.LoginActivity"
+    tools:context=".start.JoinNicknameActivity"
     android:orientation="vertical"
     android:padding="20dp">
     <Button
@@ -49,9 +49,9 @@
             android:hint="다른 분들이 뭐라고 불러야 하나요?" />
         <ImageButton
             android:visibility="gone"
-            android:id="@+id/img_delete_id"
+            android:id="@+id/imb_delete_nickname"
             android:background="@android:color/transparent"
-            android:src="@drawable/img_eye"
+            android:src="@drawable/img_delete"
             android:layout_width="50dp"
             android:layout_height="50dp"
             />
@@ -82,9 +82,10 @@
             android:layout_height="wrap_content"
             android:textColorHint="@color/edittext_hint_gray"
             android:background="@android:color/transparent"
+            android:inputType="textPassword"
             android:hint="비밀번호" />
         <ImageButton
-            android:id="@+id/img_toggle_show"
+            android:id="@+id/imb_toggle_show"
             android:background="@android:color/transparent"
             android:src="@drawable/img_eye"
             android:layout_width="50dp"

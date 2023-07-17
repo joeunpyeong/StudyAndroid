@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".start.LoginActivity"
-    android:orientation="vertical"
-    android:padding="20dp">
-    <Button
-        android:id="@+id/btn_back"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/img_backarrow"
-        android:backgroundTint="@color/sub_color_gray"
-        android:layout_width="30dp"
-        android:layout_height="30dp"/>
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가입하기"
-        android:fontFamily="@font/discord_bold"
-        android:textSize="25dp"/>
+    tools:context=".start.JoinBirthdayActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="생년월일"
-        android:textSize="12dp"
-        android:fontFamily="@font/discord_normal"
-        android:layout_marginBottom="5dp"
-        />
         <Button
-            android:id="@+id/calendar"
+            android:id="@+id/btn_back"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/img_backarrow"
+            android:backgroundTint="@color/sub_color_gray"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="생일을 입력해주세요"
+            android:fontFamily="@font/discord_bold"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="생년월일"
+            android:textSize="12dp"
+            android:fontFamily="@font/discord_normal"
+            android:layout_marginBottom="5dp"
+            />
+        <Button
+            android:id="@+id/btn_calendar"
             android:padding="10dp"
             android:gravity="center|left"
             android:layout_width="match_parent"
@@ -46,24 +50,96 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
-    <TextView
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="유효한 생년월일을 입력해주세요"
+            android:textSize="12dp"
+            android:textColor="#FF0000"
+            android:fontFamily="@font/discord_normal"
+            android:layout_marginBottom="10dp"
+            />
+
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_next"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="계정 만들기"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="등록하는 순간 Discord의 서비스 이용약관와 개인정보 보호 정책에 동의하게 됩니다."
+            android:textSize="12dp"
+            android:fontFamily="@font/discord_normal"
+            android:layout_marginBottom="5dp"
+            />
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_celender"
         android:visibility="gone"
+        android:padding="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="유효한 생년월일을 입력해주세요"
-        android:textSize="12dp"
-        android:textColor="#FF0000"
-        android:fontFamily="@font/discord_normal"
-        android:layout_marginBottom="10dp"
-        />
+        android:gravity="center"
+        android:layout_gravity="center"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:fontFamily="@font/discord_bold"
+            android:text="생년월일"/>
 
+        <DatePicker
+            android:id="@+id/dpDate"
+            android:layout_width="250dp"
+            android:layout_height="180dp"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right">
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#00FF0000"
+                android:textColor="@color/main_color_blue"
+                android:text="CANCEL"
+                android:onClick="getDate"/>
 
-    <Button
-        android:layout_marginTop="10dp"
-        android:id="@+id/btn_next"
-        android:textColor="@color/white"
-        android:background="@drawable/custom_button"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="다음"/>
-</LinearLayout>
+            <Button
+                android:id="@+id/btn_Get"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#00FF0000"
+                android:textColor="@color/main_color_blue"
+                android:text="CONFIRM"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

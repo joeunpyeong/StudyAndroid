@@ -24,18 +24,18 @@ public class DuplicateCode {
         });
     }
 
-    public static void IdBtnVisible(EditText edtId,ImageButton imbDeleteId){ //버튼 보이게 안보이게
-        edtId.addTextChangedListener(new TextWatcher() {
+    public static void IdBtnVisible(EditText edt,ImageButton imb){ //버튼 보이게 안보이게
+        edt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (edtId.length()==0){
-                    imbDeleteId.setVisibility(View.GONE);
-                } else if (edtId.length()!=0) {
-                    imbDeleteId.setVisibility(View.VISIBLE);
+                if (edt.length()==0){
+                    imb.setVisibility(View.GONE);
+                } else if (edt.length()!=0) {
+                    imb.setVisibility(View.VISIBLE);
                 }
 
             }

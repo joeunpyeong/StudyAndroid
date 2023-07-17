@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                         binding.layoutPw.setBackground(gdbFals);
                     }else{
                         //CommonVar.loginInfo = vo;
-                        Intent intent = new Intent(LoginActivity.this , MainActivity.class);
+                        Intent intent = new Intent(this , MainActivity.class);
                         startActivity(intent);
                     }
                 }
