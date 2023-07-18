@@ -32,6 +32,9 @@ public class JoinIdActivity extends AppCompatActivity {
             binding.btnEmail.setTextColor(ContextCompat.getColor(this, R.color.black));
             binding.btnDialing.setVisibility(View.VISIBLE);
             binding.edtEdit.setHint("전화번호");
+            binding.edtEdit.setText("");
+            binding.tvText.setText("전화번호");
+            binding.edtEdit.setInputType(InputType.TYPE_CLASS_NUMBER);
 
             binding.btnPhone.setBackground(ContextCompat.getDrawable(this, R.drawable.custom_choice1));
             binding.btnEmail.setBackgroundColor(Color.parseColor("#00FFFFFF"));
@@ -43,6 +46,9 @@ public class JoinIdActivity extends AppCompatActivity {
             binding.btnEmail.setTextColor(ContextCompat.getColor(this, R.color.black));
             binding.btnDialing.setVisibility(View.GONE);
             binding.edtEdit.setHint("이메일");
+            binding.edtEdit.setText("");
+            binding.tvText.setText("이메일");
+            binding.edtEdit.setInputType(InputType.TYPE_CLASS_TEXT);
 
             binding.btnPhone.setBackgroundColor(Color.parseColor("#00FFFFFF"));
             binding.btnEmail.setBackground(ContextCompat.getDrawable(this, R.drawable.custom_choice1));
@@ -58,7 +64,7 @@ public class JoinIdActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 // 텍스트 변경 시 상태를 처리
-                if (TextUtils.isEmpty(charSequence)) {
+                if (TextUtils.isEmpty(charSequence)==true) {
                     binding.btnNext.setEnabled(false); // 버튼 비활성화
                 } else {
                     binding.btnNext.setEnabled(true); // 버튼 활성화
@@ -75,7 +81,8 @@ public class JoinIdActivity extends AppCompatActivity {
             Intent intent = new Intent(this , JoinNicknameActivity.class);
             startActivity(intent);
         });
-
+        DuplicateCode.IdBtnVisible(binding.edtEdit,binding.btnClear);
+        DuplicateCode.EdtClear(binding.btnClear, binding.edtEdit);
         DuplicateCode.BackButton(binding.btnBack,this);
     }
 }

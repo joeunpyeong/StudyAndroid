@@ -1,23 +1,25 @@
 package com.example.clonecoding_discord.start;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Binder;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
+import com.example.clonecoding_discord.NoRegActivity;
+import com.example.clonecoding_discord.R;
 import com.example.clonecoding_discord.cmmon.CommonVar;
 import com.example.clonecoding_discord.cmmon.DuplicateCode;
 import com.example.clonecoding_discord.databinding.ActivityJoinBirthdayBinding;
-import com.example.clonecoding_discord.main.MainActivity;
+import com.example.clonecoding_discord.databinding.DialogCalBinding;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class JoinBirthdayActivity extends AppCompatActivity {
@@ -29,53 +31,79 @@ public class JoinBirthdayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         binding = ActivityJoinBirthdayBinding.inflate(getLayoutInflater());
-
         setContentView(binding.getRoot());
-        dpDate = (DatePicker) binding.dpDate;
+
+        Drawable color_btnnext=binding.btnNext.getBackground(),
+                        color_calenar=binding.btnCalendar.getBackground();
+
+        dpDate = binding.dpDate;
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR); // 현재 연도
         int month = calendar.get(Calendar.MONTH) + 1; // 현재 월 (0부터 시작하므로 1을 더해줌)
         int day = calendar.get(Calendar.DAY_OF_MONTH); // 현재 일
-        if (month % 10 < 1 && day % 10 < 1) {
-            binding.btnCalendar.setText(year + ".0" + month + ".0" + day);
-        } else if (month % 10 < 1) {
-            binding.btnCalendar.setText(year + ".0" + month + "." + day);
-        } else if (day % 10 < 1) {
-            binding.btnCalendar.setText(year + "." + month + ".0" + day);
-        }
+
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy.MM.dd");
         Date date = new Date(System.currentTimeMillis());
+        String formattedDate = formatter.format(date);
 
-        binding.btnCalendar.setText(formatter.format(date));
-
+        binding.btnCalendar.setText(formattedDate);
 
         binding.btnCalendar.setOnClickListener(v -> {
-            binding.cvCelender.setVisibility(View.VISIBLE);
+            DialogCalBinding dialogCalBinding = DialogCalBinding.inflate(getLayoutInflater());
+           AlertDialog.Builder builder = new AlertDialog.Builder(this);
+           builder.setView(dialogCalBinding.getRoot());
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            dialogCalBinding.btnCancel.setOnClickListener(v1 -> {
+                dialog.dismiss();
+                //   binding.cvCelender.setVisibility(View.GONE);
+//            binding.layout.setBackgroundColor(Color.parseColor("#FFFFFF"));
+//            binding.btnCalendar.setBackgroundColor(Color.parseColor("#FFFFFF"));
+//            binding.btnNext.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            });
+
+            dialogCalBinding.btnGet.setOnClickListener(v1 -> {
+                int selectedYear = dpDate.getYear();
+                int selectedMonth = dpDate.getMonth();
+                int selectedDay = dpDate.getDayOfMonth();
+
+                calendar.set(selectedYear, selectedMonth, selectedDay);
+                Date selectedDate = new Date(calendar.getTimeInMillis());
+
+                CommonVar.newUserInfo.setCreateTime(selectedDate);
+
+                String formattedDate1 = selectedYear + "." + (selectedMonth + 1) + "." + selectedDay;
+                binding.btnCalendar.setText(formattedDate1);
+                binding.cvCelender.setVisibility(View.GONE);
+                //binding.layout.setBackgroundColor(); <-----------  이거 두개 색상 어떻게 되돌리지
+                //binding.btnNext.setBackgroundColor();
+
+                StringBuilder strBuilder = new StringBuilder();
+                strBuilder.append("Selected Date: ");
+                strBuilder.append(formattedDate1);
+                Toast.makeText(this, strBuilder.toString(), Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            });
+
+
+            //binding.cvCelender.setVisibility(View.VISIBLE);
+//            binding.layout.setBackgroundColor(Color.parseColor("#80000000"));
+//            binding.btnCalendar.setBackgroundColor(Color.parseColor("#80000000"));
+//            binding.btnNext.setBackgroundColor(Color.parseColor("#80000000"));
         });
 
-        binding.btnGet.setOnClickListener(v -> {
-            int selectedYear = dpDate.getYear();
-            int selectedMonth = dpDate.getMonth();
-            int selectedDay = dpDate.getDayOfMonth();
 
-            calendar.set(selectedYear, selectedMonth, selectedDay);
-            Date selectedDate = calendar.getTime();
-
-            java.sql.Date sqlDate = new java.sql.Date(selectedDate.getTime());
-            CommonVar.newUserInfo.setCreateTime(sqlDate);
-
-            String formattedDate = selectedYear + "." + (selectedMonth + 1) + "." + selectedDay;
-            binding.btnCalendar.setText(formattedDate);
-            binding.cvCelender.setVisibility(View.GONE);
-
-            StringBuilder builder = new StringBuilder();
-            builder.append("Selected Date: ");
-            builder.append(formattedDate);
-            Toast.makeText(this, builder.toString(), Toast.LENGTH_SHORT).show();
-        });
         binding.btnNext.setOnClickListener(v -> {
-            Intent intent = new Intent(this , ProfileActivity.class);
-            startActivity(intent);
+            int selectedYear = dpDate.getYear();
+            if (year - 12 > selectedYear) {
+                Intent intent = new Intent(this, NoRegActivity.class);
+                startActivity(intent);
+            } else {
+                Intent intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
+            }
         });
+
+        DuplicateCode.BackButton(binding.btnBack, this);
     }
 }

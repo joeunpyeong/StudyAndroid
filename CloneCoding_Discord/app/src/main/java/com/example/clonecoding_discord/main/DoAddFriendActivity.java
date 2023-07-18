@@ -20,6 +20,10 @@ import com.example.clonecoding_discord.vo.FriendVO;
 import com.example.clonecoding_discord.vo.UserVO;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DoAddFriendActivity extends AppCompatActivity {
     ActivityDoAddFriendBinding binding;
@@ -80,19 +84,18 @@ public class DoAddFriendActivity extends AppCompatActivity {
                 UserVO userVO = new Gson().fromJson(data,UserVO.class);
 
                 fc.onExcute((fc_isResult, fc_data) -> {
+                 //   TypeToken typeToken = new TypeToken();
                     if(fc_isResult){
-                        FriendVO friendVO = new Gson().fromJson(fc_data , FriendVO.class);
-
+                        ArrayList<FriendVO> list = new Gson().fromJson(fc_data ,
+                                new TypeToken<ArrayList<FriendVO>>(){}.getType());
+                        FriendVO friendVO = list.get(0); //-?
                         if(userVO==null){
                             binding.userTag.setText("흠, 안되는군요. 사용자명을 올바르게 입력했는지 확인하세요.");
                             binding.userTag.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.red));
                             binding.layout.setBackground(gdbFals);
                         } else if (friendVO==null||!friendVO.getStatus().equals("친구")){
                             fa.onExcute((fa_isResult,fa_data)->{
-//                                Snackbar.make(v,"친구 요청 완료",Snackbar.LENGTH_SHORT).show();
-                                Toast toast = Toast.makeText(this, "친구 요청 완료", Toast.LENGTH_SHORT);//<----------------------------------상단에 뜨게 하고싶은데 안됨
-                                toast.setGravity(Gravity.TOP, 0, 0);
-                                toast.show();
+                                Toast.makeText(this, "친구 요청 완료", Toast.LENGTH_SHORT).show();
                                 binding.userTag.setText("내 사용자명: "+CommonVar.loginInfo.getUser_tag());
                                 binding.userTag.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.edittext_hint_gray));
                                 binding.layout.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.custom_choice));

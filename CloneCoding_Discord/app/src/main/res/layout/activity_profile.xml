@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".start.LoginActivity"
+    tools:context=".start.ProfileActivity"
     android:orientation="vertical"
     android:padding="20dp"
     >
@@ -34,16 +34,34 @@
         android:fontFamily="@font/discord_normal"
         android:textSize="12dp"
         android:layout_marginBottom="30dp"/>
-
-    <Button
-        android:id="@+id/btn_choice"
+    <FrameLayout
         android:layout_gravity="center"
-        android:scaleType="centerInside"
         android:layout_width="220dp"
-        android:layout_height="200dp"
-        android:background="@drawable/img_profile0"
-        android:drawableRight=""/>
-    <TextView
+        android:layout_height="200dp">
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/btn_choice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_profile0"/>
+        <androidx.cardview.widget.CardView
+            android:layout_gravity="right"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            app:cardCornerRadius="100dp"
+            app:cardBackgroundColor="@color/main_color_blue">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/img_add"
+                android:backgroundTint="@color/white"/>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+        <TextView
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
@@ -55,20 +73,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_margin="5dp">
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="50dp">
-            <View
+            <ImageView
+                android:visibility="gone"
                 android:id="@+id/v_select1"
                 android:layout_width="63dp"
                 android:layout_height="63dp"
                 android:background="@color/black"
                 android:padding="4dp"/>
-            <Button
+            <ImageView
                 android:layout_gravity="center"
                 android:id="@+id/btn_img1"
                 android:layout_width="60dp"
@@ -82,13 +102,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="50dp">
-            <View
+            <ImageView
+                android:visibility="gone"
                 android:id="@+id/v_select2"
                 android:layout_width="63dp"
                 android:layout_height="63dp"
                 android:background="@color/black"
                 android:padding="4dp"/>
-            <Button
+            <ImageView
                 android:layout_gravity="center"
                 android:id="@+id/btn_img2"
                 android:layout_width="60dp"
@@ -102,13 +123,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="50dp">
-            <View
+            <ImageView
+                android:visibility="gone"
                 android:id="@+id/v_select3"
                 android:layout_width="63dp"
                 android:layout_height="63dp"
                 android:background="@color/black"
                 android:padding="4dp"/>
-        <Button
+        <ImageView
             android:layout_gravity="center"
             android:id="@+id/btn_img3"
             android:layout_width="60dp"
@@ -122,13 +144,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="50dp">
-            <View
+            <ImageView
+                android:visibility="gone"
                 android:id="@+id/v_select4"
                 android:layout_width="63dp"
                 android:layout_height="63dp"
                 android:background="@color/black"
                 android:padding="4dp"/>
-        <Button
+        <ImageView
             android:layout_gravity="center"
             android:id="@+id/btn_img4"
             android:layout_width="60dp"
@@ -141,20 +164,22 @@
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:padding="5dp">
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:cardCornerRadius="50dp">
-            <View
+            <ImageView
+                android:visibility="gone"
                 android:id="@+id/v_select5"
                 android:layout_width="63dp"
                 android:layout_height="63dp"
                 android:background="@color/black"
                 android:padding="4dp"/>
-            <Button
+            <ImageView
                 android:layout_gravity="center"
                 android:id="@+id/btn_img5"
                 android:layout_width="60dp"
@@ -163,17 +188,19 @@
         </androidx.cardview.widget.CardView>
         <ImageView
             android:layout_width="20dp"
-            android:layout_height="wrap_content"/>       <androidx.cardview.widget.CardView
+            android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="50dp">
-        <View
+        <ImageView
+            android:visibility="gone"
             android:id="@+id/v_select6"
             android:layout_width="63dp"
             android:layout_height="63dp"
             android:background="@color/black"
             android:padding="4dp"/>
-        <Button
+        <ImageView
             android:layout_gravity="center"
             android:id="@+id/btn_img6"
             android:layout_width="60dp"
@@ -182,17 +209,19 @@
     </androidx.cardview.widget.CardView>
         <ImageView
             android:layout_width="20dp"
-            android:layout_height="wrap_content"/>       <androidx.cardview.widget.CardView
+            android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="50dp">
-        <View
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/v_select7"
             android:layout_width="63dp"
             android:layout_height="63dp"
             android:background="@color/black"
             android:padding="4dp"/>
-        <Button
-            android:id="@+id/v_select7"
+        <ImageView
             android:layout_gravity="center"
             android:id="@+id/btn_img7"
             android:layout_width="60dp"
@@ -201,17 +230,19 @@
     </androidx.cardview.widget.CardView>
         <ImageView
             android:layout_width="20dp"
-            android:layout_height="wrap_content"/>       <androidx.cardview.widget.CardView
+            android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="50dp">
-        <View
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/v_select8"
             android:layout_width="63dp"
             android:layout_height="63dp"
             android:background="@color/black"
             android:padding="4dp"/>
-        <Button
-            android:id="@+id/v_select8"
+        <ImageView
             android:layout_gravity="center"
             android:id="@+id/btn_img8"
             android:layout_width="60dp"
@@ -225,7 +256,7 @@
 
     <Button
         android:layout_gravity="bottom"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/btn_next"
         android:textColor="@color/white"
         android:background="@drawable/custom_button"

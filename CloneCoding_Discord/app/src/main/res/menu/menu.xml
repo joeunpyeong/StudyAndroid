@@ -23,6 +23,7 @@
         android:icon="@drawable/img_lower4"
         android:title=""/>
     <item
+
         app:showAsAction="ifRoom"
         android:id="@+id/tab5"
         android:icon="@drawable/img_lower1"
