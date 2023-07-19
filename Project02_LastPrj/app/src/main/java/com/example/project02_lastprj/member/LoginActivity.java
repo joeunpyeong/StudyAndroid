@@ -1,5 +1,6 @@
 package com.example.project02_lastprj.member;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -10,7 +11,10 @@ import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.project02_lastprj.MainActivity;
 import com.example.project02_lastprj.common.CommonVar;
@@ -39,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        checkPermission();
         KakaoSdk.init(this,"95a17db762da7ec815299df18e20e06a");
 //        UserApiClient.getInstance().unlink(new Function1<Throwable, Unit>() {
 //            @Override
@@ -141,6 +146,41 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+    //나중에 재사용이 가능하게 commonMethod등의 클래스 내부에 넣어두면 좋음.
+    private final int REQ_PERMISSION = 1000;
+    private void checkPermission(){
+        String[] permissions = { Manifest.permission.CAMERA  ,
+                Manifest.permission.ACCESS_MEDIA_LOCATION
 
+        } ;//카메라 권한을 String으로 가져옴.
+        // ContextCompat(액티비티가 아닌곳) , ActivityCompat(액티비티)
+        for(int i = 0 ; i <permissions.length ; i ++){
+            //내가 모든 권한이 필요하다면 전체 권한을 하나씩 체크해서 허용 안됨이 있는경우 다시 요청을 하게 만든다.
+            if(ActivityCompat.checkSelfPermission(this , permissions[i]) == PackageManager.PERMISSION_DENIED) {
+                ActivityCompat.requestPermissions(this, permissions, REQ_PERMISSION);
+                break;
+            }
+        }
 
+        // int result = ActivityCompat.checkSelfPermission(this , permissions[0]);
+        // Log.d("권한", "checkPermission: " + result);
+//        Log.d("권한", "checkPermission: " + PackageManager.PERMISSION_GRANTED);
+//        Log.d("권한", "checkPermission: " + PackageManager.PERMISSION_DENIED);
+//
+//        if(ActivityCompat.shouldShowRequestPermissionRationale(this , permissions[0])){
+//            Log.d("권한", "shouldShowRequestPermissionRationale: 설명이 필요한 권한. ");
+//            ActivityCompat.requestPermissions(this,permissions , REQ_PERMISSION);
+//        }else{
+//            Log.d("권한", "shouldShowRequestPermissionRationale: 설명이 x");
+//            ActivityCompat.requestPermissions(this,permissions , REQ_PERMISSION);
+//        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(REQ_PERMISSION == requestCode){
+            Log.d("권한", "onRequestPermissionsResult: 권한 요청 완료 ");
+        }
+    }
 }

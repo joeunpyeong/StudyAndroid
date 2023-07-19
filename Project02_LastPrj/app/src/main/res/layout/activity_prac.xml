@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".practice.PracActivity"
+    android:orientation="vertical">
+  <EditText
+      android:hint="MAPPING"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/edt_url"/>
+
+  <Button
+      android:text="조회(SELECT)"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/btn_select"/>
+
+  <TextView
+      android:text="여기에 데이터 써보기"
+      android:id="@+id/tv_result"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+  <Button
+      android:text="추가(insert)"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/btn_insert"/>
+  <Button
+      android:text="수정(update)"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/btn_update"/>
+  <Button
+      android:text="삭제(delete)"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/btn_delete"/>
+
+  </LinearLayout>

@@ -1,19 +1,17 @@
 package com.example.clonecoding_discord.start;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.content.res.AppCompatResources;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.clonecoding_discord.R;
 import com.example.clonecoding_discord.cmmon.CommonVar;
 import com.example.clonecoding_discord.databinding.ActivityProfileBinding;
-import com.example.clonecoding_discord.main.AllowSearchActivity;
+
+import java.util.Random;
 
 public class ProfileActivity extends AppCompatActivity {
     ActivityProfileBinding binding;
@@ -50,10 +48,20 @@ public class ProfileActivity extends AppCompatActivity {
             });
         }
         binding.btnNext.setOnClickListener(v -> {
-            CommonVar.newUserInfo.setUser_profile(binding.btnChoice.getBackground().toString());
+            CommonVar.newUserInfo.setProfile_img("drawable://" +binding.btnChoice.getBackground());
+            CommonVar.newUserInfo.setProfile_banner(convertBytesToHex());
             Intent intent = new Intent(this , AllowSearchActivity.class);
             startActivity(intent);
         });
+    }
+    private static String convertBytesToHex() {
+        byte[] bytes = new byte[3];
+        new Random().nextBytes(bytes);
+        StringBuilder result = new StringBuilder();
+        for (byte temp : bytes) {
+            result.append(String.format("%02x", temp));
+        }
+        return "#"+result.toString();
     }
 
 }

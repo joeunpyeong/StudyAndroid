@@ -3,11 +3,12 @@ package com.example.clonecoding_discord.vo;
 import java.sql.Date;
 
 public class UserVO {
-	private String name, user_id, user_pw, nick_name, user_tag, status, user_profile, profile_banner, profile_img, status_color, email, phone, nitro;
+	private int user_code;
+	private String user_id, user_pw, nick_name, user_tag, status, user_profile, profile_banner, profile_img, status_color, email, phone, nitro;
 	private Date createTime;
 
-	public UserVO(String name, String user_id, String user_pw, String nick_name, String user_tag, String status, String user_profile, String profile_banner, String profile_img, String status_color, String email, String phone, String nitro, Date createTime) {
-		this.name = name;
+	public UserVO(int user_code, String user_id, String user_pw, String nick_name, String user_tag, String status, String user_profile, String profile_banner, String profile_img, String status_color, String email, String phone, String nitro, Date createTime) {
+		this.user_code = user_code;
 		this.user_id = user_id;
 		this.user_pw = user_pw;
 		this.nick_name = nick_name;
@@ -34,12 +35,12 @@ public class UserVO {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
-	public String getName() {
-		return name;
+	public int getUser_code() {
+		return user_code;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUser_codeode(int user_code) {
+		this.user_code = user_code;
 	}
 
 	public String getUser_id() {

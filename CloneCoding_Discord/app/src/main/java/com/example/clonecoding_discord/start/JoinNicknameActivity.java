@@ -18,6 +18,8 @@ import com.example.clonecoding_discord.databinding.ActivityJoinNicknameBinding;
 import com.example.clonecoding_discord.main.MainActivity;
 import com.example.clonecoding_discord.vo.UserVO;
 
+import java.util.Random;
+
 public class JoinNicknameActivity extends AppCompatActivity {
     boolean showPwTogle=false;
     ActivityJoinNicknameBinding binding;
@@ -26,7 +28,7 @@ public class JoinNicknameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        CommonVar.newUserInfo = new UserVO();
+
         binding = ActivityJoinNicknameBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -104,7 +106,14 @@ public class JoinNicknameActivity extends AppCompatActivity {
                 binding.layoutPw.setBackground(gdbFals);
 
             }else {
+                Random random = new Random();
+                String resultNum="";
+                for (int i = 0; i <4; i++) {
+                    resultNum+=Integer.toString(random.nextInt(9));
+                }
+
                 CommonVar.newUserInfo.setNick_name(binding.edtNickname.getText().toString());
+                CommonVar.newUserInfo.setUser_tag(binding.edtNickname.getText().toString()+resultNum);
                 CommonVar.newUserInfo.setUser_pw(binding.edtPw.getText().toString());
 
                 Intent intent = new Intent(this, JoinBirthdayActivity.class);

@@ -1,5 +1,6 @@
 package com.example.clonecoding_discord.main.setting;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,33 +21,26 @@ public class SettingFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentSettingBinding.inflate(inflater, container, false);
 
-        int bannerResourceId;
         if (CommonVar.loginInfo.getProfile_banner() == null) {
-            String randomBannerName = convertBytesToHex();
-            bannerResourceId = getResources().getIdentifier(randomBannerName, "drawable", requireContext().getPackageName());
+            binding.layoutProfilebanner.setBackgroundColor(Color.parseColor(convertBytesToHex()));
         } else {
-            bannerResourceId = getResources().getIdentifier(CommonVar.loginInfo.getProfile_banner(), "drawable", requireContext().getPackageName());
+            binding.layoutProfilebanner.setBackgroundColor(Color.parseColor(CommonVar.loginInfo.getProfile_banner()));
         }
-        binding.layoutProfilebanner.setBackgroundResource(bannerResourceId);
 
         int profileResourceId;
         if (CommonVar.loginInfo.getProfile_img() == null) {
-            String randomProfileName = convertBytesToHex();
-            profileResourceId = getResources().getIdentifier(randomProfileName, "drawable", requireContext().getPackageName());
+            profileResourceId = getResources().getIdentifier("img_profile"+new Random().nextInt(9), "drawable", requireContext().getPackageName());
         } else {
             profileResourceId = getResources().getIdentifier(CommonVar.loginInfo.getProfile_img(), "drawable", requireContext().getPackageName());
         }
         binding.profileImg.setBackgroundResource(profileResourceId);
 
-        int nicknameResourceId = getResources().getIdentifier(CommonVar.loginInfo.getNick_name(), "drawable", requireContext().getPackageName());
-        binding.userNickName.setBackgroundResource(nicknameResourceId);
-
-        int userTagResourceId = getResources().getIdentifier(CommonVar.loginInfo.getUser_tag(), "drawable", requireContext().getPackageName());
-        binding.userTag.setBackgroundResource(userTagResourceId);
+        binding.userTag.setText(CommonVar.loginInfo.getUser_tag());
+        binding.userNickName.setText(CommonVar.loginInfo.getNick_name());
 
         return binding.getRoot();
     }
-
+//
     private static String convertBytesToHex() {
         byte[] bytes = new byte[3];
         new Random().nextBytes(bytes);
@@ -54,6 +48,6 @@ public class SettingFragment extends Fragment {
         for (byte temp : bytes) {
             result.append(String.format("%02x", temp));
         }
-        return result.toString();
+        return "#"+result.toString();
     }
 }
