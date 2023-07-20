@@ -52,19 +52,6 @@ public class FriendFragment extends Fragment {
             binding.haveFraiend.setVisibility(View.VISIBLE);
         }
 
-        binding.imbSample.setOnClickListener(v -> {
-            list.add(new FriendDTO("Hanul","한울","스테이터스 작성","사용자 지정상태 작성",R.drawable.img_profile1,R.id.btn_back));
-            list.add(new FriendDTO("yeong","나 영균 아니다","롤 함 뜨자","사용자 지정상태 설정 칸 입니다.",R.drawable.img_profile2,R.id.btn_back));
-            list.add(new FriendDTO("Dog","땅강아지","왈왈","스테이터스 대충 밥 주라는 소리",R.drawable.img_profile3,R.drawable.ic_launcher_background));
-            if (list.size() == 0){
-                binding.noFraiend.setVisibility(View.VISIBLE);
-                binding.haveFraiend.setVisibility(View.GONE);
-            }else{
-                binding.noFraiend.setVisibility(View.GONE);
-                binding.haveFraiend.setVisibility(View.VISIBLE);
-            }
-            friendAdapter.notifyDataSetChanged();
-        });
         binding.imbFriendPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,19 +80,7 @@ public class FriendFragment extends Fragment {
     }
     public ArrayList<FriendDTO> getList(){
         ArrayList<FriendDTO> list = new ArrayList<>();
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
-        list.add(new FriendDTO("a","b","c","d",R.drawable.img_profile1,R.drawable.img_profile1));
+
         return list;
     }
     InviteBottomSheetBinding btm_biding;

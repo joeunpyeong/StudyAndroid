@@ -47,8 +47,19 @@ public class ProfileActivity extends AppCompatActivity {
                 binding.btnChoice.setImageResource(imgArr[indexI]);
             });
         }
+
+        binding.btnChoice.setOnClickListener(v -> {});
+
+
+
+
+
+
+
+
+
         binding.btnNext.setOnClickListener(v -> {
-            CommonVar.newUserInfo.setProfile_img("drawable://" +binding.btnChoice.getBackground());
+            CommonVar.newUserInfo.setProfile_img(convertBytesToHex());// ------------바꿔야함
             CommonVar.newUserInfo.setProfile_banner(convertBytesToHex());
             Intent intent = new Intent(this , AllowSearchActivity.class);
             startActivity(intent);

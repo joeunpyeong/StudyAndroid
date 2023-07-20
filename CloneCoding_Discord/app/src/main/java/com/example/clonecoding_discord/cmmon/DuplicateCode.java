@@ -1,6 +1,10 @@
 package com.example.clonecoding_discord.cmmon;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -10,6 +14,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.clonecoding_discord.databinding.ActivityLoginBinding;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class DuplicateCode {
 //    private boolean showTogle=false;

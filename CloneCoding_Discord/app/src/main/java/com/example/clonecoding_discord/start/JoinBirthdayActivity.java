@@ -4,17 +4,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.DatePicker;
-import android.widget.Toast;
 
-import com.example.clonecoding_discord.NoRegActivity;
-import com.example.clonecoding_discord.R;
-import com.example.clonecoding_discord.cmmon.CommonVar;
 import com.example.clonecoding_discord.cmmon.DuplicateCode;
 import com.example.clonecoding_discord.databinding.ActivityJoinBirthdayBinding;
 import com.example.clonecoding_discord.databinding.DialogCalBinding;
@@ -61,8 +55,17 @@ public class JoinBirthdayActivity extends AppCompatActivity {
 
             dialogCalBinding.btnGet.setOnClickListener(v1 -> {
                 calendar.set(dialogCalBinding.dpDate.getYear(), dialogCalBinding.dpDate.getMonth(), dialogCalBinding.dpDate.getDayOfMonth());
+                String formattedDate1;
+                formattedDate1 = dialogCalBinding.dpDate.getYear()+"";
+                if ((dialogCalBinding.dpDate.getMonth() + 1)<10) {
+                    formattedDate1 += ".0" + (dialogCalBinding.dpDate.getMonth() + 1);
+                }else {
+                    formattedDate1 += "." + (dialogCalBinding.dpDate.getMonth() + 1);}
 
-                String formattedDate1 = dialogCalBinding.dpDate.getYear() + "." + (dialogCalBinding.dpDate.getMonth() + 1) + "." + dialogCalBinding.dpDate.getDayOfMonth();
+                if ((dialogCalBinding.dpDate.getDayOfMonth())<10) {
+                    formattedDate1 += ".0" + dialogCalBinding.dpDate.getDayOfMonth();
+                }else {
+                    formattedDate1 += "." + dialogCalBinding.dpDate.getDayOfMonth();}
                 binding.btnCalendar.setText(formattedDate1);
                 binding.cvCelender.setVisibility(View.GONE);
 
@@ -78,14 +81,10 @@ public class JoinBirthdayActivity extends AppCompatActivity {
 
 
         binding.btnNext.setOnClickListener(v -> {
-//            if(  dialogCalBinding == null){
-//                Toast.makeText(this, "오류발생???", Toast.LENGTH_SHORT).show();
-//                return;
-//            }
             dialogCalBinding.dpDate.getYear();
             Log.d("현재 년도", "onCreate: "+year);
             Log.d("선택 년도", "onCreate: "+  dialogCalBinding.dpDate.getYear());
-            if (year -   dialogCalBinding.dpDate.getYear()  < 12) {
+            if (dialogCalBinding == null ||year -   dialogCalBinding.dpDate.getYear()  < 12) {
                 Intent intent = new Intent(this, NoRegActivity.class);
                 startActivity(intent);
             }else{

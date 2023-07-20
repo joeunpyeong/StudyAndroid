@@ -1,8 +1,10 @@
-package com.example.clonecoding_discord;
+package com.example.clonecoding_discord.start;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.clonecoding_discord.R;
 
 public class NoRegActivity extends AppCompatActivity {
 

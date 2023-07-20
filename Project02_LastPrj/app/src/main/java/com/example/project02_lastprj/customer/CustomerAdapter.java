@@ -55,18 +55,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHo
         return list.size();
     }
 
-//    public class ViewHolder2 extends RecyclerView.ViewHolder{
-//        TextView tv1 , tv2 , tv3 , tv4 , tv5 , tv6;
-//        public ViewHolder2(@NonNull View itemView) {
-//            super(itemView);
-//            tv1 = itemView.findViewById(..);
-//            tv1 = itemView.findViewById(..);
-//            tv1 = itemView.findViewById(..);
-//            tv1 = itemView.findViewById(..);
-//            tv1 = itemView.findViewById(..);
-//            tv1 = itemView.findViewById(..);
-//        }
-//    }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ItemRecvCustomerBinding binding;

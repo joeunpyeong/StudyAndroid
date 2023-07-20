@@ -29,12 +29,6 @@
 
 
         <ImageButton
-            android:id="@+id/imb_sample"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/img_handsup"
-            android:background="@android:color/transparent"/>
-        <ImageButton
             android:id="@+id/imb_sendMsg"
             android:layout_width="50dp"
             android:layout_height="50dp"
