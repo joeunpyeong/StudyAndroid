@@ -56,13 +56,13 @@
             android:name=".practice.PracActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".file.FileActivity"
             android:exported="false" />
         <activity
             android:name=".department.DepartmentAdapter"
             android:exported="true" />
         <activity
-            android:name=".file.FileActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

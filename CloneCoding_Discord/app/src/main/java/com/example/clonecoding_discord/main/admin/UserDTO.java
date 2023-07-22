@@ -1,20 +1,16 @@
 package com.example.clonecoding_discord.main.admin;
 
-import com.example.clonecoding_discord.main.friend.FriendDTO;
-
 public class UserDTO {
     private String email, password;
     private int statusImg,phone;
     private boolean nitro;
-    private FriendDTO friendDTO;
 
-    public UserDTO(String email, String password, int statusImg, int phone, boolean nitro, FriendDTO friendDTO) {
+    public UserDTO(String email, String password, int statusImg, int phone, boolean nitro) {
         this.email = email;
         this.password = password;
         this.statusImg = statusImg;
         this.phone = phone;
         this.nitro = nitro;
-        this.friendDTO = friendDTO;
     }
 
     public String getEmail() {
@@ -57,11 +53,4 @@ public class UserDTO {
         this.nitro = nitro;
     }
 
-    public FriendDTO getFriendDTO() {
-        return friendDTO;
-    }
-
-    public void setFriendDTO(FriendDTO friendDTO) {
-        this.friendDTO = friendDTO;
-    }
 }

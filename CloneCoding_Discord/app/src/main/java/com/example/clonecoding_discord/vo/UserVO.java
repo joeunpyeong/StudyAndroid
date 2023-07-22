@@ -1,5 +1,7 @@
 package com.example.clonecoding_discord.vo;
 
+import android.graphics.drawable.Drawable;
+
 import java.sql.Date;
 
 public class UserVO {

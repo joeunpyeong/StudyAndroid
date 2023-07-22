@@ -15,12 +15,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import com.example.clonecoding_discord.cmmon.CommonConn;
 import com.example.clonecoding_discord.databinding.InviteBottomSheetBinding;
 import com.example.clonecoding_discord.main.DoAddFriendActivity;
 import com.example.clonecoding_discord.main.PermitFindFriendActivity;
 import com.example.clonecoding_discord.R;
 import com.example.clonecoding_discord.databinding.FragmentFriendBinding;
 import com.example.clonecoding_discord.main.bottom_sheet.SheetAdapter;
+import com.example.clonecoding_discord.vo.UserVO;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
@@ -29,8 +33,6 @@ public class FriendFragment extends Fragment {
 
     FragmentFriendBinding binding;
 
-    ArrayList<FriendDTO> list = new ArrayList<>();
-    FriendAdapter friendAdapter;
 
 
     @Override
@@ -38,18 +40,20 @@ public class FriendFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding= FragmentFriendBinding.inflate(inflater,container,false);
 
-        friendAdapter = new FriendAdapter(getList(), getContext());
-        binding.recvOnline.setAdapter(friendAdapter);
-        binding.recvOnline.setLayoutManager(new LinearLayoutManager(getContext()));
+        CommonConn conn = new CommonConn(getContext(),"user/frdstatus");
+        conn.onExcute((isResult, data) -> {
+            ArrayList<UserVO> list = new Gson().fromJson(data , new TypeToken<ArrayList<UserVO>>(){}.getType());
+            //if문으로 list의 사이즈처리 , 해야함.
+            FriendAdapter adapter = new FriendAdapter(list);
+            binding.recvOnline.setAdapter(adapter);
+            binding.recvOnline.setLayoutManager(new LinearLayoutManager(getContext()));
 
-
-
-        if (list.size()<=0){
-            binding.noFraiend.setVisibility(View.VISIBLE);
-            binding.haveFraiend.setVisibility(View.GONE);
+            if (list != null && list.size() > 0){
+                binding.noFraiend.setVisibility(View.GONE);
+                binding.haveFraiend.setVisibility(View.VISIBLE);
         }else{
-            binding.noFraiend.setVisibility(View.GONE);
-            binding.haveFraiend.setVisibility(View.VISIBLE);
+                binding.noFraiend.setVisibility(View.VISIBLE);
+                binding.haveFraiend.setVisibility(View.GONE);
         }
 
         binding.imbFriendPlus.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +67,7 @@ public class FriendFragment extends Fragment {
         binding.imbSendMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog();
+                showDialog(list);
             }
         });
 
@@ -75,22 +79,18 @@ public class FriendFragment extends Fragment {
                 requireActivity().overridePendingTransition(R.anim.slide_up, 0);
             }
         });
-
+    });
         return binding.getRoot();
     }
-    public ArrayList<FriendDTO> getList(){
-        ArrayList<FriendDTO> list = new ArrayList<>();
 
-        return list;
-    }
     InviteBottomSheetBinding btm_biding;
-    private void showDialog(){
+    private void showDialog(ArrayList<UserVO> list){
         final Dialog dialog = new Dialog(getActivity());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         btm_biding = InviteBottomSheetBinding.inflate(getLayoutInflater());
         dialog.setContentView(btm_biding.getRoot());
 
-        btm_biding.recvFriend.setAdapter(new SheetAdapter(getList(),getContext()));
+        btm_biding.recvFriend.setAdapter(new SheetAdapter(list,getContext()));
 
         btm_biding.recvFriend.setLayoutManager(new LinearLayoutManager(getContext()));
         dialog.show();
@@ -100,5 +100,6 @@ public class FriendFragment extends Fragment {
         dialog.getWindow().setGravity(Gravity.BOTTOM);
 
     }
+
 
 }

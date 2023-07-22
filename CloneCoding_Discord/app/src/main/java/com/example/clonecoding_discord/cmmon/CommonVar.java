@@ -7,4 +7,6 @@ public class CommonVar {
     //static변수 활용
     public static UserVO loginInfo;
     public static UserVO newUserInfo=new UserVO();
+
+    public static UserVO friendInfo=new UserVO();
 }

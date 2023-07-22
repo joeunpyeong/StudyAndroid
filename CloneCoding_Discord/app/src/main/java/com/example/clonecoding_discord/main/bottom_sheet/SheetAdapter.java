@@ -8,17 +8,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clonecoding_discord.databinding.ItemBottomSheetBinding;
-import com.example.clonecoding_discord.main.friend.FriendAdapter;
-import com.example.clonecoding_discord.main.friend.FriendDTO;
+import com.example.clonecoding_discord.main.admin.UserDTO;
+import com.example.clonecoding_discord.vo.UserVO;
 
 import java.util.ArrayList;
 
 public class SheetAdapter extends RecyclerView.Adapter<SheetAdapter.ViewHolder> {
     ItemBottomSheetBinding binding;
-    ArrayList<FriendDTO> list;
+    ArrayList<UserVO> list;
     Context context;
 
-    public SheetAdapter(ArrayList<FriendDTO> list, Context context) {
+    public SheetAdapter(ArrayList<UserVO> list, Context context) {
         this.list=list;
         this.context=context;
     }
@@ -33,8 +33,8 @@ public class SheetAdapter extends RecyclerView.Adapter<SheetAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int i) {
-        h.binding.imgvProfile.setImageResource(list.get(i).getProfileImg());
-        h.binding.tvNickname.setText(list.get(i).getUserNickName());
+        h.binding.imgvProfile.setImageResource(Integer.parseInt(list.get(i).getProfile_img()));
+        h.binding.tvNickname.setText(list.get(i).getNick_name());
 //        h.binding.lnOnlineFn.setOnLongClickListener(v -> {
 //        });
     }
