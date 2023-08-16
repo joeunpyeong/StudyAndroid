@@ -57,7 +57,7 @@ public class CommonConn {
             @Override
             public void onFailure(Call<String> call, Throwable t) {
                 Log.d(TAG, "onExcute . onFailure: "+t.getMessage() );
-                Toast.makeText(context, "서버와의 연결에 실패했습니다.(개발자문의하시든가하세요)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "서버와의 연결에 실패했습니다.", Toast.LENGTH_SHORT).show();
                 onPostExcute(false , null);
             }
         });

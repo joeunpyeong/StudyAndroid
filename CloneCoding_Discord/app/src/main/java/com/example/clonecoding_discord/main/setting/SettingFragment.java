@@ -1,5 +1,6 @@
 package com.example.clonecoding_discord.main.setting;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,9 @@ import android.view.ViewGroup;
 import com.example.clonecoding_discord.R;
 import com.example.clonecoding_discord.cmmon.CommonVar;
 import com.example.clonecoding_discord.databinding.FragmentSettingBinding;
+import com.example.clonecoding_discord.main.MainActivity;
+import com.example.clonecoding_discord.start.LoginActivity;
+import com.example.clonecoding_discord.start.WellcomActivity;
 
 import java.util.Random;
 
@@ -37,6 +41,11 @@ public class SettingFragment extends Fragment {
 
         binding.userTag.setText(CommonVar.loginInfo.getUser_tag());
         binding.userNickName.setText(CommonVar.loginInfo.getNick_name());
+
+        binding.btnLogout.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), LoginActivity.class);
+            startActivity(intent);
+        });
 
         return binding.getRoot();
     }

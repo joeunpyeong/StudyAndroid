@@ -446,6 +446,7 @@
             android:layout_marginBottom="20dp"
             android:text="계정"/>
         <Button
+            android:id="@+id/btn_logout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="left|center"

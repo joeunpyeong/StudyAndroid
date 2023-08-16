@@ -76,11 +76,15 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
             });
-        });
 
+
+        });
+        binding.btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(this , WellcomActivity.class);
+            startActivity(intent);
+        });
         DuplicateCode.IdBtnVisible(binding.edtId,binding.imbDeleteId);
         DuplicateCode.EdtClear(binding.imbDeleteId,binding.edtId);
-        DuplicateCode.BackButton(binding.btnBack,this);
 
     }
 

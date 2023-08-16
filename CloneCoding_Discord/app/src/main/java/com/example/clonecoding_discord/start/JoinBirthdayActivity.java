@@ -19,7 +19,6 @@ import java.util.Calendar;
 
 public class JoinBirthdayActivity extends AppCompatActivity {
     ActivityJoinBirthdayBinding binding;
-  //  DatePicker dpDate;
   DialogCalBinding dialogCalBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +27,7 @@ public class JoinBirthdayActivity extends AppCompatActivity {
         binding = ActivityJoinBirthdayBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Drawable color_btnnext=binding.btnNext.getBackground(),
-                        color_calenar=binding.btnCalendar.getBackground();
 
-       // dpDate = binding.dpDate;
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR); // 현재 연도
         int month = calendar.get(Calendar.MONTH) + 1; // 현재 월 (0부터 시작하므로 1을 더해줌)
@@ -67,14 +63,12 @@ public class JoinBirthdayActivity extends AppCompatActivity {
                 }else {
                     formattedDate1 += "." + dialogCalBinding.dpDate.getDayOfMonth();}
                 binding.btnCalendar.setText(formattedDate1);
-                binding.cvCelender.setVisibility(View.GONE);
 
                 StringBuilder strBuilder = new StringBuilder();
                 strBuilder.append("Selected Date: ");
                 strBuilder.append(formattedDate1);
                 binding.btnCalendar.setText(formattedDate1);
 
-                //  Toast.makeText(JoinBirthdayActivity.this, strBuilder.toString(), Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             });
         });
