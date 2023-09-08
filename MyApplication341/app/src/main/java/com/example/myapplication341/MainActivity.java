@@ -19,18 +19,33 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button button;
+    Button button,button1,button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.btnNotification);
+        button1 =findViewById(R.id.btnbackn);
+        button2 = findViewById(R.id.btnstop);
 
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.TIRAMISU){
             if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED){
                 ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
             }
         }
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent serviceIntent = new Intent(MainActivity.this, BackgroundService.class);
+                stopService(serviceIntent);
+            }
+        });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startService(new Intent(MainActivity.this, BackgroundService.class));
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
